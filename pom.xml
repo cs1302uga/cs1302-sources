@@ -1,0 +1,163 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>cs1302.aggregator</groupId>
+  <artifactId>cs1302uga-aggregator</artifactId>
+  <version>0.1.0</version>
+  <packaging>pom</packaging>
+
+  <name>CSCI 1302 @ UGA CS</name>
+  <description>Tools, starter code, etc. for CSCI 1302.</description>
+  <url>https://cs1302uga.github.io</url>
+  <inceptionYear>2021</inceptionYear>
+
+  <organization>
+    <name>CSCI 1302 @ UGA CS</name>
+    <url>${project.url}</url>
+  </organization>
+
+  <licenses>
+    <license>
+      <name>CC-BY-NC-SA-4.0</name>
+      <url>https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.txt</url>
+      <distribution>repo</distribution>
+      <comments>You do not have to comply with the license for elements of the
+      material in the public domain or where your use is permitted by an
+      applicable exception or limitation. No warranties are given. The license
+      may not give you all of the permissions necessary for your intended use.
+      For example, other rights such as publicity, privacy, or moral rights may
+      limit how you use the material.</comments>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>Michael E. Cotterell</name>
+      <email>mepcott@uga.edu</email>
+      <url>https://cs.uga.edu/directory/people/michael-e-cotterell</url>
+      <roles>
+        <role>Owner</role>
+        <role>Committer</role>
+      </roles>
+    </developer>
+    <developer>
+      <name>Bradley J. Barnes</name>
+      <email>bjb211@uga.edu</email>
+      <url>https://cs.uga.edu/directory/people/brad-barnes</url>
+      <roles>
+        <role>Owner</role>
+        <role>Committer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <maven.install.skip>true</maven.install.skip>
+  </properties>
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-scm</artifactId>
+        <version>3.4.3</version>
+      </extension>
+      <extension>
+        <groupId>org.apache.maven.scm</groupId>
+        <artifactId>maven-scm-manager-plexus</artifactId>
+        <version>1.11.1</version>
+      </extension>
+      <extension>
+        <groupId>org.apache.maven.scm</groupId>
+        <artifactId>maven-scm-provider-gitexe</artifactId>
+        <version>1.11.1</version>
+      </extension>
+    </extensions>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.9.1</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.1.1</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
+    <plugins>
+      <plugin>
+        <!-- Deploy the web site -->
+        <groupId>com.github.github</groupId>
+        <artifactId>site-maven-plugin</artifactId>
+        <version>0.9</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>site</goal>
+            </goals>
+            <!-- select the Maven phase in which the plugin will be executed -->
+            <phase>site-deploy</phase>
+            <configuration>
+              <!-- Plugin configuration ges here -->
+              <server>github</server>
+              <!-- The commit message -->
+              <message>Building site for my project</message>
+              <!-- The location where the site is uploaded -->
+              <path>${site.path}</path>
+              <!-- Use merge or override the content -->
+              <merge>true</merge>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+
+  </build>
+
+  <scm>
+    <connection>scm:git:https://github.com/cs1302uga/cs1302-sources.git</connection>
+    <developerConnection>scm:git:https://github.com/cs1302uga/cs1302-sources.git</developerConnection>
+    <url>https://github.com/cs1302uga/cs1302-sources/tree/${project.scm.tag}</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <distributionManagement>
+    <site>
+      <id>my.git.server</id>
+      <url>scm:git:ssh://git@github.com:cs1302uga/cs1302uga.github.io.git</url>
+    </site>
+  </distributionManagement>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>3.1.1</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <!-- <report>dependencies</report> -->
+              <report>summary</report>
+              <report>team</report>
+              <report>mailing-lists</report>
+              <report>ci-management</report>
+              <report>issue-management</report>
+              <report>licenses</report>
+              <!-- <report>scm</report> -->
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+    </plugins>
+  </reporting>
+
+</project>

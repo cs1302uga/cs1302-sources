@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/DECORATION/1.8.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.8.0 http://maven.apache.org/xsd/decoration-1.8.0.xsd">
+
+  <version position="right"/>
+  <publishDate position="right"/>
+
+  <skin>
+    <groupId>org.apache.maven.skins</groupId>
+    <artifactId>maven-fluido-skin</artifactId>
+    <version>1.9</version>
+  </skin>
+
+  <custom>
+    <fluidoSkin>
+      yle><sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
+    </fluidoSkin>
+  </custom>
+
+  <body>
+
+    <breadcrumbs>
+      <item name="${project.name}" href="${project.url}"/>
+    </breadcrumbs>
+
+    <menu>
+      <item name="Welcome" href="index.html" />
+    </menu>
+
+    <menu ref="reports" />
+    <menu ref="modules" />
+    <menu ref="parent" />
+
+    <footer>
+      <![CDATA[
+
+        <p>
+          &copy; ${project.inceptionYear} <a href="${project.organization.url}">${project.organization.name}</a>.
+        </p>
+        <p class="text-muted">
+          The content and opinions expressed on this Web page do not necessarily reflect the views of nor are they endorsed by the University of Georgia or the University System of Georgia.
+        </p>
+
+      ]]>
+    </footer>
+
+  </body>
+
+</project>
