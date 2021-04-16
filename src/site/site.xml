@@ -17,11 +17,11 @@
     </fluidoSkin>
   </custom>
 
-  <body>
+  <bannerLeft>
+    <name>${project.organization.name}</name>
+  </bannerLeft>
 
-    <bannerLeft>
-      <name>${project.organization.name}</name>
-    </bannerLeft>
+  <body>
 
     <breadcrumbs>
       <item name="${project.organization.name}" href="${project.url}"/>
