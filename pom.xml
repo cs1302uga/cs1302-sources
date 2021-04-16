@@ -128,7 +128,17 @@
         <configuration>
           <useReleaseProfile>false</useReleaseProfile>
           <tagNameFormat>v@{version}</tagNameFormat>
+          <providerImplementations>
+			<git>jgit</git>
+		  </providerImplementations>
         </configuration>
+        <dependencies>
+		  <dependency>
+			<groupId>org.apache.maven.scm</groupId>
+			<artifactId>maven-scm-provider-jgit</artifactId>
+            <version>1.11.2</version>
+		  </dependency>
+		</dependencies>
       </plugin>
     </plugins>
 
