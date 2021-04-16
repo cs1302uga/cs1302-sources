@@ -11,7 +11,7 @@
 
   </modules>
 
-  <name>Aggregator POM for cs1302uga</name>
+  <name>${project.groupId}:${project.artifactId}</name>
   <description>Tools, starter code, etc. for CSCI 1302.</description>
   <url>https://cs1302uga.github.io</url>
   <inceptionYear>2021</inceptionYear>
