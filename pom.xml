@@ -4,7 +4,7 @@
 
   <groupId>cs1302</groupId>
   <artifactId>cs1302</artifactId>
-  <version>0.2.11-SNAPSHOT</version>
+  <version>0.2.11</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -138,7 +138,7 @@
     <connection>scm:git:git@github.com:cs1302uga/cs1302-sources.git</connection>
     <developerConnection>scm:git:git@github.com:cs1302uga/cs1302-sources.git</developerConnection>
     <url>https://github.com/cs1302uga/cs1302-sources/tree/${project.scm.tag}</url>
-    <tag>cs1302uga-aggregator-0.1.0</tag>
+    <tag>v0.2.11</tag>
   </scm>
 
   <distributionManagement>
