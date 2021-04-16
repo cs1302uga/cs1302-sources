@@ -137,6 +137,7 @@
     </site>
     <snapshotRepository>
       <id>cs1302uga.github.io</id>
+      <uniqueVersion>false</uniqueVersion>
       <url>scm:git:git@github.com:cs1302uga/cs1302uga.github.io.git</url>
       <layout>default</layout>
     </snapshotRepository>
