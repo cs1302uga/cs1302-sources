@@ -128,9 +128,6 @@
         <configuration>
           <useReleaseProfile>false</useReleaseProfile>
           <tagNameFormat>v@{version}</tagNameFormat>
-          <providerImplementations>
-			<git>jgit</git>
-		  </providerImplementations>
         </configuration>
         <dependencies>
           <dependency>
