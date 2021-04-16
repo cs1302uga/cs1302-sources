@@ -84,7 +84,7 @@
           <artifactId>maven-site-plugin</artifactId>
           <version>3.9.1</version>
           <configuration>
-            <topSiteURL>scm:git:ssh://git@github.com:cs1302uga/cs1302uga.github.io.git</topSiteURL>
+            <topSiteURL>scm:git:git@github.com:cs1302uga/cs1302uga.github.io.git</topSiteURL>
           </configuration>
         </plugin>
         <plugin>

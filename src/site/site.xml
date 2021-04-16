@@ -19,12 +19,16 @@
 
   <body>
 
+    <bannerLeft>
+      <name>${project.organization.name}</name>
+    </bannerLeft>
+
     <breadcrumbs>
-      <item name="${project.name}" href="${project.url}"/>
+      <item name="${project.organization.name}" href="${project.url}"/>
     </breadcrumbs>
 
     <menu>
-      <item name="Welcome" href="index.html" />
+      <item name="Welcome" href="${project.url}" />
     </menu>
 
     <menu ref="reports" />
