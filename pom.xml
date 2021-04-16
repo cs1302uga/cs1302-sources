@@ -2,10 +2,14 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>cs1302uga.aggregator</groupId>
-  <artifactId>cs1302uga-aggregator</artifactId>
+  <groupId>cs1302</groupId>
+  <artifactId>cs1302</artifactId>
   <version>0.2.11-SNAPSHOT</version>
   <packaging>pom</packaging>
+
+  <modules>
+
+  </modules>
 
   <name>Aggregator POM for cs1302uga</name>
   <description>Tools, starter code, etc. for CSCI 1302.</description>
