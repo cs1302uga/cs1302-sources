@@ -167,27 +167,25 @@
   </build>
 
   <scm>
-    <connection>scm:git:git@github.com:cs1302uga/cs1302-sources.git</connection>
-    <developerConnection>scm:git:git@github.com:cs1302uga/cs1302-sources.git</developerConnection>
-    <url>https://github.com/cs1302uga/cs1302-sources/tree/${project.scm.tag}</url>
-    <tag>v0.2.13</tag>
+    <connection>scm:git:ssh://github.com:cs1302uga/cs1302-sources.git</connection>
+    <developerConnection>scm:git:ssh://github.com:cs1302uga/cs1302-sources.git</developerConnection>
+    <url>https://github.com/cs1302uga/cs1302-sources/tree/master</url>
   </scm>
 
   <distributionManagement>
     <site>
       <id>cs1302uga.github.io</id>
       <name>cs1302uga.github.io</name>
-      <url>scm:git:git@github.com:cs1302uga/cs1302uga.github.io.git</url>
+      <url>scm:git:ssh://github.com:cs1302uga/cs1302uga.github.io.git</url>
     </site>
     <repository>
       <id>releases</id>
-      <url>scm:git:git@github.com:cs1302uga/cs1302uga.github.io.git</url>
+      <url>scm:git:ssh://github.com:cs1302uga/cs1302uga.github.io.git</url>
       <layout>default</layout>
     </repository>
-
     <snapshotRepository>
       <id>snapshots</id>
-      <url>scm:git:git@github.com:cs1302uga/cs1302uga.github.io.git</url>
+      <url>scm:git:ssh://github.com:cs1302uga/cs1302uga.github.io.git</url>
       <layout>default</layout>
     </snapshotRepository>
   </distributionManagement>
