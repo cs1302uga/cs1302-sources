@@ -135,9 +135,13 @@
       <name>cs1302uga.github.io</name>
       <url>scm:git:git@github.com:cs1302uga/cs1302uga.github.io.git</url>
     </site>
+    <repository>
+      <id>releases</id>
+      <url>scm:git:git@github.com:cs1302uga/cs1302uga.github.io.git</url>
+      <layout>default</layout>
+    </repository>
     <snapshotRepository>
-      <id>cs1302uga.github.io</id>
-      <uniqueVersion>false</uniqueVersion>
+      <id>snapshots</id>
       <url>scm:git:git@github.com:cs1302uga/cs1302uga.github.io.git</url>
       <layout>default</layout>
     </snapshotRepository>
