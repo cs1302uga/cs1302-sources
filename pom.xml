@@ -3,7 +3,7 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>cs1302.aggregator</groupId>
+  <groupId>cs1302uga.aggregator</groupId>
   <artifactId>cs1302uga-aggregator</artifactId>
   <version>0.1.0</version>
   <packaging>pom</packaging>
@@ -83,6 +83,9 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
           <version>3.9.1</version>
+          <configuration>
+            <topSiteURL>scm:git:ssh://git@github.com:cs1302uga/cs1302uga.github.io.git</topSiteURL>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -94,45 +97,30 @@
 
     <plugins>
       <plugin>
-        <!-- Deploy the web site -->
-        <groupId>com.github.github</groupId>
-        <artifactId>site-maven-plugin</artifactId>
-        <version>0.9</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>site</goal>
-            </goals>
-            <!-- select the Maven phase in which the plugin will be executed -->
-            <phase>site-deploy</phase>
-            <configuration>
-              <!-- Plugin configuration ges here -->
-              <server>github</server>
-              <!-- The commit message -->
-              <message>Building site for my project</message>
-              <!-- The location where the site is uploaded -->
-              <path>${site.path}</path>
-              <!-- Use merge or override the content -->
-              <merge>true</merge>
-            </configuration>
-          </execution>
-        </executions>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-scm-publish-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <scmBranch>gh-pages</scmBranch>
+          <tryUpdate>true</tryUpdate>
+        </configuration>
       </plugin>
     </plugins>
 
   </build>
 
   <scm>
-    <connection>scm:git:https://github.com/cs1302uga/cs1302-sources.git</connection>
-    <developerConnection>scm:git:https://github.com/cs1302uga/cs1302-sources.git</developerConnection>
+    <connection>scm:git:git@github.com/cs1302uga/cs1302-sources.git</connection>
+    <developerConnection>scm:git:git@github.com/cs1302uga/cs1302-sources.git</developerConnection>
     <url>https://github.com/cs1302uga/cs1302-sources/tree/${project.scm.tag}</url>
     <tag>HEAD</tag>
   </scm>
 
   <distributionManagement>
     <site>
-      <id>my.git.server</id>
-      <url>scm:git:ssh://git@github.com:cs1302uga/cs1302uga.github.io.git</url>
+      <id>cs1302uga.github.io</id>
+      <name>cs1302uga.github.io</name>
+      <url>scm:git:git@github.com:cs1302uga/cs1302uga.github.io.git</url>
     </site>
   </distributionManagement>
 
