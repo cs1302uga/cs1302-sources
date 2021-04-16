@@ -4,7 +4,7 @@
 
   <groupId>cs1302uga.aggregator</groupId>
   <artifactId>cs1302uga-aggregator</artifactId>
-  <version>0.2.10-SNAPSHOT</version>
+  <version>0.2.9-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Aggregator POM for cs1302uga</name>
@@ -118,6 +118,14 @@
           <scmBranch>gh-pages</scmBranch>
         </configuration>
       </plugin>
+      <plugin>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+        <configuration>
+          <useReleaseProfile>false</useReleaseProfile>
+          <tagNameFormat>v@{version}</tagNameFormat>
+        </configuration>
+      </plugin>
     </plugins>
 
   </build>
@@ -137,12 +145,12 @@
     </site>
     <repository>
       <id>releases</id>
-      <url>scm:git:ssh://git@github.com:cs1302uga/cs1302uga.github.io.git</url>
+      <url>scm:git:git@github.com:cs1302uga/cs1302uga.github.io.git</url>
       <layout>default</layout>
     </repository>
     <snapshotRepository>
       <id>snapshots</id>
-      <url>scm:git:ssh://git@github.com:cs1302uga/cs1302uga.github.io.git</url>
+      <url>scm:git:git@github.com:cs1302uga/cs1302uga.github.io.git</url>
       <layout>default</layout>
     </snapshotRepository>
   </distributionManagement>
