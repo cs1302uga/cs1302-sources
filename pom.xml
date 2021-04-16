@@ -1,11 +1,10 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>cs1302uga.aggregator</groupId>
   <artifactId>cs1302uga-aggregator</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>0.1.0</version>
   <packaging>pom</packaging>
 
   <name>Aggregator POM for cs1302uga</name>
@@ -112,7 +111,7 @@
     <connection>scm:git:git@github.com/cs1302uga/cs1302-sources.git</connection>
     <developerConnection>scm:git:git@github.com/cs1302uga/cs1302-sources.git</developerConnection>
     <url>https://github.com/cs1302uga/cs1302-sources/tree/${project.scm.tag}</url>
-    <tag>HEAD</tag>
+    <tag>cs1302uga-aggregator-0.1.0</tag>
   </scm>
 
   <distributionManagement>
