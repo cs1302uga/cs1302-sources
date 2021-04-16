@@ -191,7 +191,7 @@
               <report>ci-management</report>
               <report>issue-management</report>
               <report>licenses</report>
-              <!-- <report>scm</report> -->
+              <report>scm</report>
             </reports>
           </reportSet>
         </reportSets>
