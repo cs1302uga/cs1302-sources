@@ -4,7 +4,7 @@
 
   <groupId>cs1302uga.aggregator</groupId>
   <artifactId>cs1302uga-aggregator</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Aggregator POM for cs1302uga</name>
@@ -120,10 +120,10 @@
       <name>cs1302uga.github.io</name>
       <url>scm:git:git@github.com:cs1302uga/cs1302uga.github.io.git</url>
     </site>
-    <repository>
+    <snapshotRepository>
       <id>cs1302uga.github.io</id>
       <url>scm:git:git@github.com:cs1302uga/cs1302uga.github.io.git</url>
-    </repository>
+    </snapshotRepository>
   </distributionManagement>
 
   <reporting>
