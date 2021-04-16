@@ -12,6 +12,10 @@
   <url>https://cs1302uga.github.io</url>
   <inceptionYear>2021</inceptionYear>
 
+  <prerequisites>
+    <maven>3.0.5</maven>
+  </prerequisites>
+
   <organization>
     <name>CSCI 1302 @ UGA CS</name>
     <url>${project.url}</url>
