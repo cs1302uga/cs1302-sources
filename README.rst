@@ -1,9 +1,11 @@
-cs1302-sources
-##############
+.. header::
 
-Originally designed for the CSCI 1302 Software Development course at the 
-University of Georgia, the **cs1302-sources** project includes Open Source 
-Software (OSS) and Open Educational Resources (OERs) designed for CS2. 
+   cs1302-sources
+   ##############
+
+   Originally designed for the CSCI 1302 Software Development course at the 
+   University of Georgia, the **cs1302-sources** project includes Open Source 
+   Software (OSS) and Open Educational Resources (OERs) designed for CS2. 
 
 .. |copy|   unicode:: U+000A9 .. COPYRIGHT SIGN
 
