@@ -8,7 +8,7 @@
   <version>0.1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>CSCI 1302 @ UGA CS</name>
+  <name>Aggregator POM for cs1302uga</name>
   <description>Tools, starter code, etc. for CSCI 1302.</description>
   <url>https://cs1302uga.github.io</url>
   <inceptionYear>2021</inceptionYear>
