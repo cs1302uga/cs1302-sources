@@ -128,8 +128,6 @@
         <configuration>
           <!-- <goals>deploy site site:stage scm-publish:publish-scm</goals> -->
           <goals>deploy site site:stage scm-publish:publish-scm nexus-staging:release</goals>
-          <useReleaseProfile>false</useReleaseProfile>
-          <releaseProfiles>release</releaseProfiles>
         </configuration>
       </plugin>
       <plugin>
