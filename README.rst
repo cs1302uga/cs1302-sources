@@ -33,10 +33,11 @@ the version number in the POM in any way.
 Release
 *******
 
-To deploy a release, use the following command:
+To deploy a release, follow the instructions provided below.
 
 .. code::
 
+   $ mvn -B versions:use-releases
    $ mvn -B release:clean release:prepare
    $ mvn -B release:perform
 
