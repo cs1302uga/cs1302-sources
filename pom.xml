@@ -126,7 +126,7 @@
         <artifactId>maven-release-plugin</artifactId>
         <version>3.0.0-M1</version>
         <configuration>
-          <goals>deploy site site:stage scm-publish:publish-scm</goals>
+          <goals>verify deploy site site:stage scm-publish:publish-scm</goals>
           <useReleaseProfile>false</useReleaseProfile>
           <releaseProfiles>release</releaseProfiles>
         </configuration>
