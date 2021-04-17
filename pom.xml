@@ -127,7 +127,7 @@
         <version>3.0.0-M1</version>
         <configuration>
           <!-- <goals>deploy site site:stage scm-publish:publish-scm</goals> -->
-          <goals>deploy site site:stage scm-publish:publish-scm nexus-staging:release</goals>
+          <goals>deploy site site:stage scm-publish:publish-scm</goals>
         </configuration>
       </plugin>
       <plugin>
