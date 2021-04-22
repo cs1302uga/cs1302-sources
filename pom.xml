@@ -163,7 +163,7 @@
   <scm>
     <connection>scm:git:git@github.com:cs1302uga/cs1302-sources.git</connection>
     <developerConnection>scm:git:git@github.com:cs1302uga/cs1302-sources.git</developerConnection>
-    <url>https://github.com/cs1302uga/cs1302-sources/tree/master</url>
+    <url>https://github.com/cs1302uga/cs1302-sources/tree/main</url>
     <tag>HEAD</tag>
   </scm>
 
