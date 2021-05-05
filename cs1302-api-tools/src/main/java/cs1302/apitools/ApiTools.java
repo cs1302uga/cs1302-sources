@@ -1,6 +1,20 @@
 package cs1302.apitools;
 
+import java.nio.charset.Charset;
+
+/**
+ * A collection of static methods and constants for working with APIs.
+ */
 public final class ApiTools {
+
+    /**
+     * The UTF-8 charset specified by RFC 2279. This constant is provided here
+     * to make the {@link java.net.URLEncoder#encode(String, Charset)} method
+     * easier to use.
+     * @see <a href="http://www.ietf.org/rfc/rfc2279.txt">RFC 2279</a>
+     * @see <a href="http://www.unicode.org/unicode/standard/standard.html">Unicode Standard</a>
+     */
+    public static final Charset UTF8 = Charset.forName("UTF-8");
 
     /**
      * Hidden default constructor.
