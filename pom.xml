@@ -8,17 +8,17 @@
   <packaging>pom</packaging>
 
   <modules>
-
+    <module>cs1302-api-tools</module>
   </modules>
 
-  <name>${project.groupId}:${project.artifactId}</name>
+  <name>${project.artifactId}</name>
   <description>Tools, starter code, etc. for CSCI 1302.</description>
   <url>https://cs1302uga.github.io</url>
   <inceptionYear>2021</inceptionYear>
 
   <organization>
     <name>CSCI 1302 @ UGA CS</name>
-    <url>${project.url}</url>
+    <url>https://cs1302uga.github.io</url>
   </organization>
 
   <licenses>
@@ -26,12 +26,17 @@
       <name>CC-BY-NC-SA-4.0</name>
       <url>https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.txt</url>
       <distribution>repo</distribution>
-      <comments>You do not have to comply with the license for elements of the
-      material in the public domain or where your use is permitted by an
-      applicable exception or limitation. No warranties are given. The license
-      may not give you all of the permissions necessary for your intended use.
-      For example, other rights such as publicity, privacy, or moral rights may
-      limit how you use the material.</comments>
+      <comments>Any project that is part of ${project.groupId} is said to use
+      this license, unless explicitly stated otherwise in the project's POM. You
+      do not have to comply with the license for elements of the material in the
+      public domain or where your use is permitted by an applicable exception or
+      limitation. No warranties are given. The license may not give you all of
+      the permissions necessary for your intended use. For example, other rights
+      such as publicity, privacy, or moral rights may limit how you use the
+      material. Additionally, it should be noted that the content and opinions
+      expressed in this license do not necessarily reflect the views of nor are
+      they endorsed by the University of Georgia or the University System of
+      Georgia.</comments>
     </license>
   </licenses>
 
@@ -185,25 +190,6 @@
 
   <reporting>
     <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-project-info-reports-plugin</artifactId>
-        <version>3.1.1</version>
-        <reportSets>
-          <reportSet>
-            <reports>
-              <report>dependencies</report>
-              <report>summary</report>
-              <report>team</report>
-              <report>mailing-lists</report>
-              <report>ci-management</report>
-              <report>issue-management</report>
-              <report>licenses</report>
-              <report>scm</report>
-            </reports>
-          </reportSet>
-        </reportSets>
-      </plugin>
     </plugins>
   </reporting>
 

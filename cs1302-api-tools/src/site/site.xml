@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/DECORATION/1.8.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/DECORATION/1.8.0 http://maven.apache.org/xsd/decoration-1.8.0.xsd"
-          name="CSCI 1302 @ UGA CS">
+          name="CSCI 1302 API Tools">
 
   <version position="right"/>
   <publishDate position="right"/>
@@ -18,18 +18,22 @@
   </custom>
 
   <bannerLeft>
-    <name>${this.organization.name}</name>
+    <name>${project.organization.name}</name>
   </bannerLeft>
 
   <body>
 
     <breadcrumbs>
-      <item name="${this.organization.name}" href="${this.organization.url}"/>
-      <item name="${this.name}" href="${this.url}"/>
+      <item name="${project.name}" href="${this.url}"/>
     </breadcrumbs>
 
-    <menu>
-      <item name="Welcome" href="${this.url}" />
+    <menu name="Overview">
+      <item name="Welcome" href="index.html" />
+    </menu>
+
+    <menu name="API Documentation">
+      <item name="User API" href="user-api/apidocs/index.html" />
+      <item name="Developer API" href="devel-api/apidocs/index.html" />
     </menu>
 
     <menu ref="reports" />

@@ -1,0 +1,22 @@
+#[[##]]# ${project.name}
+
+**${project.description}**
+
+The goal of this project is to provide a simple library for working with
+[REST-like](https://en.wikipedia.org/wiki/Representational_state_transfer)
+APIs, usually hosted as web services, that elicit a response with a payload
+formatted in [JSON](https://en.wikipedia.org/wiki/JSON),
+[XML](https://en.wikipedia.org/wiki/XML), or any other supported formats.
+Here is a small example:
+
+```java
+// import statements
+import static cs1302.apitools.Tools.getJson;
+import cs1302.apitools.Header;
+import cs1302.apitools.Request;
+```
+
+```java
+var endpoint = "https://api.thedogapi.com/v1/breeds";
+var response = getJson(endpoint, Request.GET, Header.entry("x-api-key", "YOUR-API-KEY-HERE"));
+```
