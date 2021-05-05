@@ -1,5 +1,5 @@
 /**
- * TODO WRITE
+ * Provides {@code cs1302-api-tools} packages.
  */
 module cs1302.apitools {
     requires transitive java.logging;
