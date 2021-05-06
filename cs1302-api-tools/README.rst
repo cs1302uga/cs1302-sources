@@ -4,8 +4,8 @@ cs1302-api-tools
 The |cs1302_sources| project provides a library for fetching responses from
 |rest_like|_ APIs that are hosted as web services. Its simple yet flexible
 request and response patterns leverage the ``java.net.http`` module that was
-introduced in Java 11, and support response payloads formatted in various
-types (e.g., JSON, XML, and plain text).
+introduced in Java 11, and support payloads formatted in various types
+(e.g., JSON, XML, and plain text).
 
 More details coming soon!
 
