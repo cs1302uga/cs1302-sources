@@ -1,6 +1,11 @@
 package cs1302.apitools;
 
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
 import java.nio.charset.Charset;
+
+import com.google.gson.JsonElement;
 
 /**
  * A collection of static methods and constants for working with APIs.
