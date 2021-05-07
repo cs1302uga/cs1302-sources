@@ -1,9 +1,0 @@
-/**
- * Provides {@code cs1302-api-tools} packages.
- */
-/*open module cs1302.apitools {
-    requires transitive java.logging;
-    requires transitive java.net.http;
-    requires static com.google.gson;
-} // module
-*/
