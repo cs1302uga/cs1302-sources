@@ -9,6 +9,7 @@
 
   <modules>
     <module>cs1302-api-tools</module>
+    <module>cs1302-archetype-quickstart</module>
   </modules>
 
   <name>${project.artifactId}</name>

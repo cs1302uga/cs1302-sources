@@ -45,12 +45,12 @@ public final class ApiTools {
     public static final HttpClient DEFAULT_CLIENT = HttpClient.newHttpClient();
 
     /**
-     * {@link BodyHandler} for treating response payloads as strings.
+     * {@link BodyHandler BodyHandler} for treating response payloads as strings.
      */
     public static final BodyHandler<String> STR = BodyHandlers.ofString(UTF8);
 
     /**
-     * {@link BodyHandler} for JSON response payloads. Gson's
+     * {@link BodyHandler BodyHandler} for JSON response payloads. Gson's
      * {@link JsonParser#parseString} method is used to create a
      * {@link JsonElement} object representing the JSON root element
      * for a response payload.
@@ -60,7 +60,7 @@ public final class ApiTools {
     };
 
     /**
-     * {@link BodyHandler} for JSON response payloads that will be
+     * {@link BodyHandler BodyHandler} for JSON response payloads that will be
      * read using the Jayway JsonPath library. JsonPath's
      * {@link JsonPath#parse} method is used to create a
      * {@link DocumentContext} object representing the JSON document
@@ -71,7 +71,7 @@ public final class ApiTools {
     };
 
     /**
-     * {@link BodyHandler} for DOM-compatible XML response payloads.
+     * {@link BodyHandler BodyHandler} for DOM-compatible XML response payloads.
      * The {@link DocumentBuilder#parse} method is used to create a
      * {@code Document} object representing the Document Object Model
      * (DOM) for a response payload.
@@ -113,7 +113,7 @@ public final class ApiTools {
      * @return a {@link CompletableFuture} supporting dependent
      *     handlers that execute once the response is available.
      */
-    <T> CompletableFuture<HttpResponse<T>> fetch(
+    public <T> CompletableFuture<HttpResponse<T>> fetch(
         HttpClient client, HttpRequest request, BodyHandler<T> bodyHandler) {
         return client.sendAsync(request, bodyHandler);
     } // fetch
