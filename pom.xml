@@ -232,7 +232,9 @@
               <id>scm-publish</id>
               <phase>site-deploy</phase>
               <goals>
-                <goal>site site:stage scm-publish:publish-scm</goal>
+                <goal>site</goal>
+                <goal>site:stage</goal>
+                <goal>publish-scm</goal>
               </goals>
             </execution>
           </executions>
