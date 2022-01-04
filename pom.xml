@@ -99,7 +99,6 @@
   <build>
 
     <extensions>
-      <!--
       <extension>
         <groupId>org.apache.maven.wagon</groupId>
         <artifactId>wagon-scm</artifactId>
@@ -115,7 +114,6 @@
         <artifactId>maven-scm-provider-gitexe</artifactId>
         <version>1.11.2</version>
       </extension>
--->
     </extensions>
 
     <pluginManagement>
