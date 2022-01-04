@@ -168,13 +168,11 @@
               <id>sign-artifacts</id>
               <phase>verify</phase>
               <goals>
-                <goal>verify</goal>
+                <goal>sign</goal>
               </goals>
               <configuration>
                 <keyname>${gpg.keyname}</keyname>
                 <passphraseServerId>${gpg.keyname}</passphraseServerId>
-                <verbose>true</verbose>
-                <certs>true</certs>
               </configuration>
             </execution>
           </executions>
@@ -196,8 +194,8 @@
         <artifactId>maven-release-plugin</artifactId>
         <version>3.0.0-M1</version>
         <configuration>
-          <goals>package gpg:sign deploy site site:stage scm-publish:publish-scm</goals>
-          <preparationGoals>clean verify</preparationGoals>
+<!--          <goals>package gpg:sign deploy </goals>-->
+          <preparationGoals>clean verify site site:stage scm-publish:publish-scm</preparationGoals>
         </configuration>
       </plugin>
       <plugin>
