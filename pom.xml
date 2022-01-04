@@ -99,6 +99,7 @@
   <build>
 
     <extensions>
+      <!--
       <extension>
         <groupId>org.apache.maven.wagon</groupId>
         <artifactId>wagon-scm</artifactId>
@@ -114,6 +115,7 @@
         <artifactId>maven-scm-provider-gitexe</artifactId>
         <version>1.11.2</version>
       </extension>
+-->
     </extensions>
 
     <pluginManagement>
@@ -212,11 +214,13 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-scm-plugin</artifactId>
           <version>1.12.2</version>
+          <!--
           <configuration>
 		    <providerImplementations>
 			  <git>gitexe</git>
 		    </providerImplementations>
 		  </configuration>
+-->
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -225,7 +229,7 @@
           <executions>
             <execution>
               <id>scm-publish</id>
-              <phase>site-deploy</phase><!-- deploy site with maven-scm-publish-plugin -->
+              <phase>site-deploy</phase>
               <goals>
                 <goal>publish-scm</goal>
               </goals>
