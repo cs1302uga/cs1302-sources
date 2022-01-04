@@ -126,23 +126,6 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-scm-plugin</artifactId>
-          <version>1.12.2</version>
-          <configuration>
-			<providerImplementations>
-			  <git>jgit</git>
-			</providerImplementations>
-		  </configuration>
-		  <dependencies>
-			<dependency>
-			  <groupId>org.apache.maven.scm</groupId>
-			  <artifactId>maven-scm-provider-jgit</artifactId>
-              <version>1.12.2</version>
-			</dependency>
-		  </dependencies>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
           <version>3.2.0</version>
         </plugin>
@@ -198,6 +181,16 @@
     </pluginManagement>
 
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-scm-plugin</artifactId>
+        <version>1.12.2</version>
+        <configuration>
+		  <providerImplementations>
+			<git>gitexe</git>
+		  </providerImplementations>
+		</configuration>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-scm-publish-plugin</artifactId>
