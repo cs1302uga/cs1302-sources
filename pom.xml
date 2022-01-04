@@ -63,9 +63,13 @@
   </developers>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <maven.install.skip>true</maven.install.skip>
+    <cs1302.java.version>11</cs1302.java.version>
+    <cs1302.encoding>UTF-8</cs1302.encoding>
+    <cs1302.javadoc.io>https://www.javadoc.io/doc</cs1302.javadoc.io>
+    <project.build.sourceEncoding>${cs1302.encoding}</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>${cs1302.encoding}</project.reporting.outputEncoding>
+    <maven.compiler.source>${cs1302.java.version}</maven.compiler.source>
+    <maven.compiler.target>${cs1302.java.version}</maven.compiler.target>
   </properties>
 
   <dependencyManagement>
