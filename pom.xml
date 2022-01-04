@@ -176,7 +176,7 @@
           <artifactId>maven-site-plugin</artifactId>
           <version>3.10.0</version>
           <configuration>
-            <skipDeploy>true</skipDeploy>
+
           </configuration>
         </plugin>
         <plugin>
@@ -232,8 +232,6 @@
               <id>scm-publish</id>
               <phase>site-deploy</phase>
               <goals>
-                <goal>site</goal>
-                <goal>site:stage</goal>
                 <goal>publish-scm</goal>
               </goals>
             </execution>
