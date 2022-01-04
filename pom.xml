@@ -4,7 +4,7 @@
 
   <groupId>io.github.cs1302uga</groupId>
   <artifactId>cs1302</artifactId>
-  <version>0.2.66-SNAPSHOT</version>
+  <version>0.2.65-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -142,6 +142,9 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
           <version>3.0.0-M2</version>
+          <configuration>
+            <deployAtEnd>true</deployAtEnd>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -176,7 +179,6 @@
           <artifactId>maven-site-plugin</artifactId>
           <version>3.10.0</version>
           <configuration>
-
           </configuration>
         </plugin>
         <plugin>
