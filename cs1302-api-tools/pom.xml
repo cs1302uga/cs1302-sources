@@ -5,12 +5,12 @@
   <parent>
     <groupId>io.github.cs1302uga</groupId>
     <artifactId>cs1302</artifactId>
-    <version>0.2.52</version>
+    <version>0.2.53-SNAPSHOT</version>
   </parent>
 
   <groupId>io.github.cs1302uga</groupId>
   <artifactId>cs1302-api-tools</artifactId>
-  <version>0.1.22</version>
+  <version>0.1.23-SNAPSHOT</version>
 
   <name>${project.artifactId}</name>
   <description>API Tools for CSCI 1302.</description>
