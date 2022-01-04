@@ -12,7 +12,7 @@
   <url>https://cs.uga.edu</url>
 
   <properties>
-    <cs1302.java.version>11</cs1302.java.version>
+    <cs1302.java.version>17</cs1302.java.version>
     <cs1302.encoding>UTF-8</cs1302.encoding>
     <maven.compiler.source>${cs1302.java.version}</maven.compiler.source>
     <maven.compiler.target>${cs1302.java.version}</maven.compiler.target>
