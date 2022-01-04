@@ -192,8 +192,7 @@
         <artifactId>maven-release-plugin</artifactId>
         <version>3.0.0-M1</version>
         <configuration>
-          <goals>verify package gpg:sign deploy</goals>
-          <preparationGoals>clean verify site site:stage scm-publish:publish-scm</preparationGoals>
+          <goals>package gpg:sign deploy site site:stage scm-publish:publish-scm</goals>
         </configuration>
       </plugin>
       <plugin>
@@ -221,17 +220,6 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.7</version>
-        <extensions>true</extensions>
-        <configuration>
-          <serverId>ossrh</serverId>
-          <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-          <autoReleaseAfterClose>true</autoReleaseAfterClose>
-        </configuration>
       </plugin>
     </plugins>
   </build>
