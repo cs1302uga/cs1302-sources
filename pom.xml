@@ -130,6 +130,11 @@
           <version>1.12.2</version>
         </plugin>
         <plugin>
+          <groupId>org.apache.maven.scm</groupId>
+          <artifactId>maven-scm-providers-git</artifactId>
+          <version>1.12.2</version>
+        </plugin>
+        <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
           <version>3.2.0</version>
