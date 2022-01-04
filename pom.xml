@@ -196,7 +196,7 @@
         <artifactId>maven-release-plugin</artifactId>
         <version>3.0.0-M1</version>
         <configuration>
-          <goals>deploy site site:stage scm-publish:publish-scm</goals>
+          <goals>package gpg:sign deploy site site:stage scm-publish:publish-scm</goals>
           <preparationGoals>clean verify</preparationGoals>
         </configuration>
       </plugin>
