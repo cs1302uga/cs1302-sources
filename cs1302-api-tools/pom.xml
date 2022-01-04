@@ -65,7 +65,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>3.2.0</version>
+        <version>3.3.1</version>
         <configuration>
           <defaultVersion>${project.version}</defaultVersion>
           <fixTags>version</fixTags>
@@ -82,6 +82,12 @@
           </links>
         </configuration>
         <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
           <execution>
             <id>javadoc-public-api</id>
             <phase>site</phase>
