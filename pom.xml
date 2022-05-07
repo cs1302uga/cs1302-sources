@@ -230,8 +230,8 @@
               </goals>
             </execution>
             <execution>
-              <id>deploy-sign-artifacts</id>
-              <phase>injected-nexus-deploy</phase>
+              <id>install-sign-artifacts</id>
+              <phase>install</phase>
               <goals>
                 <goal>sign</goal>
               </goals>
