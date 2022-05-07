@@ -229,6 +229,13 @@
                 <goal>sign</goal>
               </goals>
             </execution>
+            <execution>
+              <id>sign-artifacts</id>
+              <phase>injected-nexus-deploy</phase>
+              <goals>
+                <goal>sign</goal>
+              </goals>
+            </execution>
           </executions>
         </plugin>
         <plugin>
@@ -262,16 +269,6 @@
           <artifactId>nexus-staging-maven-plugin</artifactId>
           <version>1.6.13</version>
           <extensions>true</extensions>
-          <executions>
-<!--            <execution>
-              <id>default-deploy</id>
-              <phase>deploy</phase>
-              <goals>
-                <goal>deploy</goal>
-              </goals>
-              </execution>
-              -->
-          </executions>
           <configuration>
             <serverId>ossrh</serverId>
             <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
