@@ -153,7 +153,7 @@
           <configuration>
             <useReleaseProfile>false</useReleaseProfile>
             <releaseProfiles>release</releaseProfiles>
-            <goals>deploy nexus-staging:release</goals>
+            <goals>nexus-staging:release</goals>
           </configuration>
         </plugin>
         <plugin>
