@@ -12,12 +12,10 @@
   <url>https://cs.uga.edu</url>
 
   <properties>
-    <cs1302.java.version>17</cs1302.java.version>
-    <cs1302.encoding>UTF-8</cs1302.encoding>
-    <maven.compiler.source>${cs1302.java.version}</maven.compiler.source>
-    <maven.compiler.target>${cs1302.java.version}</maven.compiler.target>
-    <project.build.sourceEncoding>${cs1302.encoding}</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>${cs1302.encoding}</project.reporting.outputEncoding>
+    <maven.compiler.source>${java-version}</maven.compiler.source>
+    <maven.compiler.target>${java-version}</maven.compiler.target>
+    <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
   </properties>
 
   <dependencies>
@@ -25,10 +23,31 @@
   </dependencies>
 
   <build>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-checkstyle-plugin</artifactId>
+          <version>3.1.2</version>
+          <configuration>
+            <configLocation>https://github.com/cs1302uga/cs1302-styleguide/raw/master/cs1302_checks.xml</configLocation>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>com.puppycrawl.tools</groupId>
+              <artifactId>checkstyle</artifactId>
+              <version>10.2</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
+        <version>3.10.1</version>
         <configuration>
           <compilerArgs>
             <arg>-Xlint:unchecked</arg>
