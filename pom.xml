@@ -323,7 +323,7 @@
     <site>
       <id>cs1302uga.github.io</id>
       <name>cs1302uga.github.io</name>
-      <url>scm:git:git@github.com:cs1302uga/cs1302uga.github.io.git</url>
+      <url>scm:git:ssh://git@github.com:cs1302uga/cs1302uga.github.io.git</url>
     </site>
     <snapshotRepository>
       <id>ossrh</id>
