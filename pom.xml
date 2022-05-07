@@ -221,7 +221,7 @@
               <id>sign-artifacts</id>
               <phase>verify</phase>
               <goals>
-                <goal>sign-and-deploy</goal>
+                <goal>sign</goal>
               </goals>
             </execution>
           </executions>
