@@ -184,8 +184,8 @@
           <artifactId>maven-site-plugin</artifactId>
           <version>3.10.0</version>
           <configuration>
-            <!-- <skip>true</skip>
-            <skipDeploy>true</skipDeploy> /-->
+            <skip>true</skip>
+            <skipDeploy>true</skipDeploy>
           </configuration>
         </plugin>
         <plugin>
