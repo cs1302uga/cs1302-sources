@@ -231,7 +231,7 @@
             </execution>
             <execution>
               <id>release-sign-artifacts</id>
-              <phase>deploy</phase>
+              <phase>run-perform-goals</phase>
               <goals>
                 <goal>sign</goal>
               </goals>
