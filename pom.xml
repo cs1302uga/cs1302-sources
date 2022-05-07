@@ -223,14 +223,14 @@
           <version>3.0.1</version>
           <executions>
             <execution>
-              <id>sign-artifacts</id>
+              <id>verify-sign-artifacts</id>
               <phase>verify</phase>
               <goals>
                 <goal>sign</goal>
               </goals>
             </execution>
             <execution>
-              <id>sign-artifacts</id>
+              <id>deploy-sign-artifacts</id>
               <phase>injected-nexus-deploy</phase>
               <goals>
                 <goal>sign</goal>
