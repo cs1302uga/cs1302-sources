@@ -230,8 +230,8 @@
               </goals>
             </execution>
             <execution>
-              <id>install-sign-artifacts</id>
-              <phase>install</phase>
+              <id>release-sign-artifacts</id>
+              <phase>release</phase>
               <goals>
                 <goal>sign</goal>
               </goals>
