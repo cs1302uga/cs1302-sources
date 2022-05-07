@@ -4,7 +4,7 @@
 
   <groupId>io.github.cs1302uga</groupId>
   <artifactId>cs1302</artifactId>
-  <version>0.2.75-SNAPSHOT</version>
+  <version>0.2.75</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -316,7 +316,7 @@
     <connection>scm:git:git@github.com:cs1302uga/cs1302-sources.git</connection>
     <developerConnection>scm:git:git@github.com:cs1302uga/cs1302-sources.git</developerConnection>
     <url>https://github.com/cs1302uga/cs1302-sources/tree/main</url>
-    <tag>cs1302-0.2.65</tag>
+    <tag>cs1302-0.2.75</tag>
   </scm>
 
   <distributionManagement>
