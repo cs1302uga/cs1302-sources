@@ -218,7 +218,7 @@
           <executions>
             <execution>
               <id>sign-artifacts</id>
-              <phase>deploy</phase>
+              <phase>default-deploy</phase>
               <goals>
                 <goal>sign-and-deploy</goal>
               </goals>
