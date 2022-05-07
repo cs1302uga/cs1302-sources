@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/DECORATION/1.8.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.8.0 http://maven.apache.org/xsd/decoration-1.8.0.xsd"
+         name="cs1302-archetype-quickstart">
+
+  <version position="right"/>
+  <publishDate position="right"/>
+
+  <skin>
+    <groupId>org.apache.maven.skins</groupId>
+    <artifactId>maven-fluido-skin</artifactId>
+    <version>1.9</version>
+  </skin>
+
+  <custom>
+    <fluidoSkin>
+      <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
+    </fluidoSkin>
+  </custom>
+
+  <bannerLeft>
+    <name>${this.organization.name}</name>
+  </bannerLeft>
+
+  <body>
+
+    <breadcrumbs>
+      <item name="${this.organization.name}" href="${this.organization.url}"/>
+      <item name="${this.name}" href="${this.url}"/>
+    </breadcrumbs>
+
+    <menu ref="reports" />
+    <menu ref="modules" />
+    <menu ref="parent" />
+
+    <footer>
+      <![CDATA[
+
+        <p>
+          &copy; ${this.inceptionYear} <a href="${this.organization.url}">${this.organization.name}</a>.
+        </p>
+        <p class="text-muted">
+          The content and opinions expressed on this Web page do not necessarily reflect the views of nor are they endorsed by the University of Georgia or the University System of Georgia.
+        </p>
+
+      ]]>
+    </footer>
+
+  </body>
+
+</project>

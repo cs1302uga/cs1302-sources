@@ -1,0 +1,17 @@
+#[[##]]# ${project.artifactId}
+
+The **${project.artifactId}** project provides a
+[Maven *archetype*](https://maven.apache.org/archetype/maven-archetype-plugin/index.html)
+that can be used with the
+[Maven Archetype Plugin](https://maven.apache.org/archetype/maven-archetype-plugin/generate-mojo.html).
+Here is a quick example that creates a sample project
+using the archetype in the `test-app` directory:
+
+```bash
+mvn archetype:generate \
+  -DarchetypeGroupId=${project.groupId} \
+  -DarchetypeArtifactId=${project.artifactId} \
+  -DarchetypeVersion=${project.version} \
+  -DgroupId=cs1302.quick \
+  -DartifactId=test-app
+```
