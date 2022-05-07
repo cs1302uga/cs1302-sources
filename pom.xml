@@ -153,7 +153,7 @@
           <configuration>
             <useReleaseProfile>false</useReleaseProfile>
             <releaseProfiles>release</releaseProfiles>
-            <goals>gpg:sign deploy nexus-staging:release</goals>
+            <goals>install gpg:sign deploy nexus-staging:release</goals>
           </configuration>
         </plugin>
         <plugin>
