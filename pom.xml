@@ -4,7 +4,7 @@
 
   <groupId>io.github.cs1302uga</groupId>
   <artifactId>cs1302</artifactId>
-  <version>0.2.113-SNAPSHOT</version>
+  <version>0.2.113</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -205,6 +205,7 @@
           <executions>
             <execution>
               <id>sign</id>
+              <phase>verify</phase>
               <goals>
                 <goal>sign</goal>
               </goals>
@@ -218,7 +219,7 @@
           <executions>
             <execution>
               <id>sign-artifacts</id>
-              <phase>default-deploy</phase>
+              <phase>verify</phase>
               <goals>
                 <goal>sign-and-deploy</goal>
               </goals>
