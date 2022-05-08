@@ -63,6 +63,18 @@
   </build>
 
   <reporting>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-javadoc-plugin</artifactId>
+      <reportSets>
+        <reportSet>
+          <reports>
+            <report>javadoc-no-fork</report>
+            <report>test-javadoc-no-fork</report>
+          </reports>
+        </reportSet>
+      </reportSets>
+    </plugin>
   </reporting>
 
 </project>
