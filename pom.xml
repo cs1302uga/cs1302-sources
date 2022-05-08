@@ -152,7 +152,7 @@
           <version>3.0.0-M5</version>
           <configuration>
             <useReleaseProfile>false</useReleaseProfile>
-            <goals>install gpg:sign nexus-staging:release site site:stage scm-publish:publish-scm</goals>
+            <goals>install gpg:sign deploy nexus-staging:release site site:stage scm-publish:publish-scm</goals>
           </configuration>
         </plugin>
         <plugin>
@@ -271,8 +271,8 @@
           <configuration>
             <serverId>ossrh</serverId>
             <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-            <autoReleaseAfterClose>true</autoReleaseAfterClose>
             <skipStagingRepositoryClose>true</skipStagingRepositoryClose>
+            <autoReleaseAfterClose>true</autoReleaseAfterClose>
           </configuration>
         </plugin>
         <plugin>
