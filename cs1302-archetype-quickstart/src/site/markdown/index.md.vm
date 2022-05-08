@@ -1,6 +1,15 @@
-# About
+#set($h1 = '#')
+#set($h2 = '##')
+#set($h3 = '###')
+#set($h4 = '####')
 
-#[[##]]# ${project.artifactId}
+<head>
+    <title>About</title>
+</head>
+
+<h1 class="visually-hidden">${project.name}</h1>
+
+$h2 ${project.artifactId}
 
 The **${project.artifactId}** project provides a
 [Maven *archetype*](https://maven.apache.org/archetype/maven-archetype-plugin/index.html)
