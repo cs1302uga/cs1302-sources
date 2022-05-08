@@ -6,6 +6,7 @@
     display: none !important;
 }
 
+#banner,
 footer > .container > .row {
     margin-left: unset;
 }
