@@ -41,6 +41,12 @@ To deploy a release, follow the instructions provided below.
    $ mvn -B release:clean release:prepare
    $ mvn -B release:perform
 
+Important URLs
+**************
+
+Maven Central:
+   https://search.maven.org/search?q=g:io.github.cs1302uga
+
 .. footer::
 
    Copyright |copy| Michael E. Cotterell and the University of Georgia
