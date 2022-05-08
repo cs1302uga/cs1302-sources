@@ -4,7 +4,7 @@
 
   <groupId>io.github.cs1302uga</groupId>
   <artifactId>cs1302</artifactId>
-  <version>0.3.26</version>
+  <version>0.3.27-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -182,7 +182,7 @@
           <version>3.0.0-M5</version>
           <configuration>
             <useReleaseProfile>false</useReleaseProfile>
-            <goals>verify gpg:sign deploy nexus-staging:release site site:stage scm-publish:publish-scm</goals>
+            <goals>verify javadoc:jar gpg:sign deploy nexus-staging:release site site:stage scm-publish:publish-scm</goals>
           </configuration>
         </plugin>
         <plugin>
@@ -208,7 +208,7 @@
               <id>attach-javadocs</id>
               <phase>package</phase>
               <goals>
-                <goal>aggregate-jar</goal>
+                <goal>aggregate</goal>
               </goals>
             </execution>
           </executions>
@@ -241,7 +241,7 @@
             </execution>
             <execution>
               <id>package-sign-artifacts</id>
-              <phase>package</phase>
+              <phase>install</phase>
               <goals>
                 <goal>sign</goal>
               </goals>
@@ -400,6 +400,13 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>aggregate</report>
+            </reports>
+          </reportSet>
+        </reportSets>
       </plugin>
     </plugins>
   </reporting>
