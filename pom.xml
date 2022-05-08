@@ -204,15 +204,13 @@
           <artifactId>maven-javadoc-plugin</artifactId>
           <version>3.4.0</version>
           <executions>
-            <!--
             <execution>
               <id>attach-javadocs</id>
-              <phase>package</phase>
+              <phase>deploy</phase>
               <goals>
                 <goal>jar</goal>
               </goals>
             </execution>
-            -->
           </executions>
         </plugin>
         <plugin>
