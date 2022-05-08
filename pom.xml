@@ -182,7 +182,7 @@
           <version>3.0.0-M5</version>
           <configuration>
             <useReleaseProfile>false</useReleaseProfile>
-            <goals>verify javadoc:jar gpg:sign deploy nexus-staging:release site site:stage scm-publish:publish-scm</goals>
+            <goals>verify javadoc:aggregate-jar gpg:sign deploy nexus-staging:release site site:stage scm-publish:publish-scm</goals>
           </configuration>
         </plugin>
         <plugin>
@@ -208,7 +208,7 @@
               <id>attach-javadocs</id>
               <phase>package</phase>
               <goals>
-                <goal>aggregate</goal>
+                <goal>aggregate-no-fork</goal>
               </goals>
             </execution>
           </executions>
@@ -403,7 +403,7 @@
         <reportSets>
           <reportSet>
             <reports>
-              <report>aggregate</report>
+              <report>aggregate-no-fork</report>
             </reports>
           </reportSet>
         </reportSets>
