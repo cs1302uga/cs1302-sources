@@ -182,7 +182,7 @@
           <version>3.0.0-M5</version>
           <configuration>
             <useReleaseProfile>false</useReleaseProfile>
-            <goals>install gpg:sign jarsigner:sign jarsigner:verify deploy nexus-staging:release site site:stage scm-publish:publish-scm</goals>
+            <goals>verify install gpg:sign deploy nexus-staging:release site site:stage scm-publish:publish-scm</goals>
           </configuration>
         </plugin>
         <plugin>
