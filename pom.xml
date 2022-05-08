@@ -208,7 +208,7 @@
               <id>attach-javadocs</id>
               <phase>package</phase>
               <goals>
-                <goal>aggregate-no-fork</goal>
+                <goal>aggregate-jar</goal>
               </goals>
             </execution>
           </executions>
@@ -240,8 +240,8 @@
               </goals>
             </execution>
             <execution>
-              <id>release-sign-artifacts</id>
-              <phase>release</phase>
+              <id>package-sign-artifacts</id>
+              <phase>package</phase>
               <goals>
                 <goal>sign</goal>
               </goals>
