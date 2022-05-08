@@ -1,0 +1,21 @@
+##
+#set( $bodyContent = $bodyContent.replaceAll('class="bodyTable"', 'class="table"') )
+##
+#macro( generatedBy )
+Apache Maven Doxia Site Renderer#if( $doxiaSiteRendererVersion ) $doxiaSiteRendererVersion#end##
+#end
+##
+#macro ( link $href $name $class $target )
+#**##if( $target )
+#*  *##set ( $linkTarget = ' target="' + $target + '"' )
+#**##else
+#*  *##set ( $linkTarget = "" )
+#**##end
+#**##if( $class )
+#*  *##set ( $linkClass = ' class="' + $class + '"' )
+#**##else
+#*  *##set ( $linkClass = "" )
+#**##end
+#**#<a href="$href"$linkClass$linkTarget>$name</a>
+#end
+##

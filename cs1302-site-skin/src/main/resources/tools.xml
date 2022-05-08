@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Add custom tools to Velocity tools. The tools.xml file is included in the classpath and Velocity finds it. -->
+<tools>
+  <toolbox scope="application">
+    <tool key="jsoup"
+          class="io.github.cs1302uga.JsoupTool"/>
+  </toolbox>
+</tools>
