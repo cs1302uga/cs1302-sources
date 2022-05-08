@@ -48,10 +48,10 @@
           <artifactId>maven-javadoc-plugin</artifactId>
           <executions>
             <execution>
-              <id>attach-javadocs</id>
+              <id>attach-site-skin-javadocs</id>
               <phase>package</phase>
               <goals>
-                <goal>javadoc</goal>
+                <goal>javadoc-no-fork</goal>
               </goals>
             </execution>
           </executions>
