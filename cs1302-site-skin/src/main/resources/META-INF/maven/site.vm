@@ -33,9 +33,9 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
-              #**##link( $link.relative("index.html") "About" "nav-link active" )
-              #**##link( $link.relative("project-info.html") "Project Information" "nav-link" )
-              #**##link( $link.relative("project-reports.html") "Generated Reports" "nav-link" )
+              #**##link( $PathTool.calculateLink("index.html", $relativePath) "About" "nav-link active" )
+              #**##link( $PathTool.calculateLink("project-info.html", $relativePath) "Project Information" "nav-link" )
+              #**##link( $PathTool.calculateLink("project-reports.html", $relativePath) "Generated Reports" "nav-link" )
             </div>
           </div>
         </div>
