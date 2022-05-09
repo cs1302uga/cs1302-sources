@@ -5,17 +5,7 @@
 Apache Maven Doxia Site Renderer#if( $doxiaSiteRendererVersion ) $doxiaSiteRendererVersion#end##
 #end
 ##
-#macro ( link $href $name $class $target )
-#**##if( $target )
-#*  *##set ( $linkTarget = ' target="' + $target + '"' )
-#**##else
-#*  *##set ( $linkTarget = "" )
-#**##end
-#**##if( $class )
-#*  *##set ( $linkClass = ' class="' + $class + '"' )
-#**##else
-#*  *##set ( $linkClass = "" )
-#**##end
-#**#<a href="$href"$linkClass$linkTarget>$name</a>
+#macro( mavenCentralBadge )
+<img alt="Maven Central" src="https://img.shields.io/maven-central/v/$project.groupId/$project.artifactId">
 #end
 ##

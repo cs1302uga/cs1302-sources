@@ -27,15 +27,15 @@
     <header>
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container">
-          <a class="navbar-brand" href="#">$project.artifactId</a>
+          <a class="navbar-brand" href="$project.url">$project.artifactId</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
-              #**##link( $PathTool.calculateLink("index.html", $relativePath) "About" "nav-link active" )
-              #**##link( $PathTool.calculateLink("project-info.html", $relativePath) "Project Information" "nav-link" )
-              #**##link( $PathTool.calculateLink("project-reports.html", $relativePath) "Generated Reports" "nav-link" )
+              <a href="$PathTool.calculateLink( "index.html", $relativePath )" class="nav-link active">About</a>
+              <a href="$PathTool.calculateLink( "project-info.html", $relativePath )" class="nav-link">Project Information</a>
+              <a href="$PathTool.calculateLink( "project-reports.html", $relativePath )" class="nav-link">Generated Reports</a>
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@
     </header>
     <aside class="bg-light">
       <div class="container py-2">
-        <img alt="Maven Central" src="https://img.shields.io/maven-central/v/$project.groupId/$project.artifactId">
+        #mavenCentralBadge()
       </div>
     </aside>
     <main class="flex-shrink-0">

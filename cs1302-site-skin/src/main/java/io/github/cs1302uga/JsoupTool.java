@@ -15,13 +15,15 @@ import org.jsoup.nodes.Element;
  *
  * @author Michael E. Cotterell
  */
-@DefaultKey("jsoupTool")
+@DefaultKey("soup")
 public class JsoupTool extends SafeConfig {
 
     /**
      * Construct a {@code JsoupTool} object.
      */
-    public JsoupTool() {}
+    public JsoupTool() {
+        System.out.println("READT");
+    }
 
     /**
      * Parse the supplied HTML {@code content} string using jsoup.
