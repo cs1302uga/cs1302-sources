@@ -85,6 +85,21 @@
   </build>
 
   <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.4.0</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>aggregate-no-fork</report>
+              <report>test-aggregate-no-fork</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+    </plugins>
   </reporting>
 
 </project>
