@@ -203,7 +203,7 @@
           <version>3.0.1</version>
           <executions>
             <execution>
-              <id>verify-sign-artifacts</id>
+              <id>sign-artifacts</id>
               <phase>verify</phase>
               <goals>
                 <goal>sign</goal>
