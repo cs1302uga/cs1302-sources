@@ -5,12 +5,12 @@
   <parent>
     <groupId>io.github.cs1302uga</groupId>
     <artifactId>cs1302</artifactId>
-    <version>0.3.56</version>
+    <version>0.3.57-SNAPSHOT</version>
   </parent>
 
   <groupId>io.github.cs1302uga</groupId>
   <artifactId>cs1302-archetype-quickstart</artifactId>
-  <version>0.3.29</version>
+  <version>0.3.30-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
   <name>${project.artifactId}</name>
