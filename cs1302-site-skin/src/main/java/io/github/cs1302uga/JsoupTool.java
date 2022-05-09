@@ -36,14 +36,10 @@ public class JsoupTool extends SafeConfig {
      */
     @Override
     protected void configure(ValueParser values) {
-        System.out.println("** JsoupTool.configure *******************");
-        System.out.println(values);
         Optional.ofNullable(values.get(ToolContext.CONTEXT_KEY))
             .filter(ToolContext.class::isInstance)
             .map(ToolContext.class::cast)
             .ifPresent(this::initFromContext);
-        System.out.println("******************************************");
-        System.out.flush();
     } // configure
 
     /**
@@ -53,7 +49,6 @@ public class JsoupTool extends SafeConfig {
      * @param velocityContext
      */
     private void initFromContext(ToolContext velocityContext) {
-        System.out.println(velocityContext.keySet());
         Optional.ofNullable(velocityContext.get("outputEncoding"))
             .filter(String.class::isInstance)
             .map(String.class::cast)
