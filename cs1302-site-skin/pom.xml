@@ -5,12 +5,12 @@
   <parent>
     <groupId>io.github.cs1302uga</groupId>
     <artifactId>cs1302</artifactId>
-    <version>0.3.41-SNAPSHOT</version>
+    <version>0.3.41</version>
   </parent>
 
   <groupId>io.github.cs1302uga</groupId>
   <artifactId>cs1302-site-skin</artifactId>
-  <version>0.1.39-SNAPSHOT</version>
+  <version>0.1.39</version>
   <packaging>jar</packaging>
 
   <name>${project.artifactId}</name>
