@@ -63,7 +63,7 @@
   </developers>
 
   <properties>
-    <cs1302.java.version>11</cs1302.java.version>
+    <cs1302.java.version>17</cs1302.java.version>
     <cs1302.encoding>UTF-8</cs1302.encoding>
     <cs1302.javadoc.io>https://www.javadoc.io/doc</cs1302.javadoc.io>
     <project.build.sourceEncoding>${cs1302.encoding}</project.build.sourceEncoding>
@@ -130,23 +130,6 @@
               </goals>
             </execution>
           </executions>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>3.1.2</version>
-          <configuration>
-            <configLocation>https://github.com/cs1302uga/cs1302-styleguide/raw/master/cs1302_checks.xml</configLocation>
-            <consoleOutput>true</consoleOutput>
-            <linkXRef>false</linkXRef>
-          </configuration>
-          <dependencies>
-            <dependency>
-              <groupId>com.puppycrawl.tools</groupId>
-              <artifactId>checkstyle</artifactId>
-              <version>10.2</version>
-            </dependency>
-          </dependencies>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -313,6 +296,11 @@
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.2.0</version>
         </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.10.1</version>
+        </plugin>
       </plugins>
     </pluginManagement>
 
@@ -392,10 +380,6 @@
 
   <reporting>
     <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
