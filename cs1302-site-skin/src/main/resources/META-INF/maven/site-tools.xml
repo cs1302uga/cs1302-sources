@@ -2,7 +2,7 @@
 <!-- Add custom tools to Velocity tools. The tools.xml file is included in the classpath and Velocity finds it. -->
 <tools>
   <toolbox scope="application">
-    <tool key="soup"
-          class="io.github.cs1302uga.JsoupTool"/>
+    <tool key="soup" class="io.github.cs1302uga.JsoupTool"/>
+    <tool key="map" class="java.util.HashMap"/>
   </toolbox>
 </tools>
