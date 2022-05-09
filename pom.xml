@@ -191,7 +191,7 @@
               <id>attach-javadocs</id>
               <phase>package</phase>
               <goals>
-                <goal>aggregate-no-fork</goal>
+                <goal>javadoc-no-fork</goal>
               </goals>
             </execution>
           </executions>
@@ -386,7 +386,7 @@
         <reportSets>
           <reportSet>
             <reports>
-              <report>aggregate-no-fork</report>
+              <report>javadoc-no-fork</report>
             </reports>
           </reportSet>
         </reportSets>
