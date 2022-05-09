@@ -201,8 +201,8 @@
           <artifactId>maven-site-plugin</artifactId>
           <version>4.0.0-M1</version>
           <configuration>
-            <!-- <skip>true</skip>
-                 <skipDeploy>true</skipDeploy> -->
+            <skip>true</skip>
+            <skipDeploy>true</skipDeploy>
           </configuration>
         </plugin>
         <plugin>
@@ -218,13 +218,6 @@
             <execution>
               <id>verify-sign-artifacts</id>
               <phase>verify</phase>
-              <goals>
-                <goal>sign</goal>
-              </goals>
-            </execution>
-            <execution>
-              <id>package-sign-artifacts</id>
-              <phase>install</phase>
               <goals>
                 <goal>sign</goal>
               </goals>
