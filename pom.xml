@@ -229,9 +229,6 @@
           <configuration>
             <serverId>ossrh</serverId>
             <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-            <argLine>
-              --add-opens java.base/java.util=ALL-UNNAMED
-            </argLine>
           </configuration>
           <executions>
             <execution>
