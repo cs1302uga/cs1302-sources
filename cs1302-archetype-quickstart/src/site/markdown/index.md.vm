@@ -11,14 +11,20 @@
 
 $h2 ${project.artifactId}
 
-The **${project.artifactId}** project provides a
+The **${project.groupId}:${project.artifactId}** project provides a
 [Maven *archetype*](https://maven.apache.org/archetype/maven-archetype-plugin/index.html)
 that can be used with the
 [Maven Archetype Plugin](https://maven.apache.org/archetype/maven-archetype-plugin/generate-mojo.html)
-to generate a project project. Here is a quick example that generates a project
-using the archetype:
+to generate a Maven project.
 
-```bash
+$h3 Usage
+
+To generate a Maven project based on the ${project.artifactId} archetype,
+run the command below. When the `archetype:generate` goal executes, you will be
+prompted to provide additional details for some required properties, many of
+which have default values.
+
+```console
 mvn archetype:generate \
   -DarchetypeGroupId=${project.groupId} \
   -DarchetypeArtifactId=${project.artifactId} \
