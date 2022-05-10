@@ -12,14 +12,16 @@
     </fileSet>
   </fileSets>
   <requiredProperties>
+    <requiredProperty key="groupId"/>
+    <requiredProperty key="artifactId"/>
+    <requiredProperty key="version">
+      <defaultValue>0.1.0-SNAPSHOT</defaultValue>
+    </requiredProperty>
     <requiredProperty key="java-version">
       <defaultValue>17</defaultValue>
     </requiredProperty>
     <requiredProperty key="encoding">
       <defaultValue>UTF-8</defaultValue>
-    </requiredProperty>
-    <requiredProperty key="version">
-      <defaultValue>0.1.0-SNAPSHOT</defaultValue>
     </requiredProperty>
   </requiredProperties>
 </archetype-descriptor>

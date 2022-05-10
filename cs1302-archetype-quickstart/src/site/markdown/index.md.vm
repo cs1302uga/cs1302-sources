@@ -24,3 +24,11 @@ mvn archetype:generate \
   -DarchetypeArtifactId=${project.artifactId} \
   -DarchetypeVersion=${project.version}
 ```
+
+$h3 Required Parameters
+
+| Name           | Default          | Description |
+|----------------|------------------|-------------|
+| `java-version` | `17`             |
+| `encoding`     | `UTF-8`          |
+| `version`      | `0.1.0-SNAPSHOT` |

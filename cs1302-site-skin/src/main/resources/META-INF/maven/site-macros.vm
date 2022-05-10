@@ -5,9 +5,17 @@
 Apache Maven Doxia Site Renderer#if( $doxiaSiteRendererVersion ) $doxiaSiteRendererVersion#end##
 #end
 ##
-#macro( mavenCentralBadge )
-<img alt="Maven Central" src="https://img.shields.io/maven-central/v/$project.groupId/$project.artifactId">
-#end
+#macro( img $alt $src )##-------------------------------------------------------
+#**#<img alt="$alt" src="$src">##
+#end##--------------------------------------------------------------------------
 ##
-#macro( href $href )$PathTool.calculateLink( $href, $relativePath )#end
+#macro( mavenCentralBadge )##---------------------------------------------------
+#img ( "Maven Central" "https://img.shields.io/maven-central/v/$project.groupId/$project.artifactId" )
+#end##--------------------------------------------------------------------------
+##
+#macro( calcLink $target )##----------------------------------------------------
+#**### Calculates the appropriate to the target.
+#**### @param target specifies the target URL
+#**#$PathTool.calculateLink( $target, $relativePath )##
+#end##--------------------------------------------------------------------------
 ##
