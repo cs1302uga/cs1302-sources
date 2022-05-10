@@ -8,7 +8,7 @@
   <skin>
     <groupId>io.github.cs1302uga</groupId>
     <artifactId>cs1302-site-skin</artifactId>
-    <version>0.1.65</version>
+    <version>0.1.66</version>
     <!--
     <groupId>org.apache.maven.skins</groupId>
     <artifactId>maven-fluido-skin</artifactId>
