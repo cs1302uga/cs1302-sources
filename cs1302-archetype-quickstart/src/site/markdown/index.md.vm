@@ -27,8 +27,15 @@ mvn archetype:generate \
 
 $h3 Required Parameters
 
-| Name           | Default          | Description |
-|----------------|------------------|-------------|
-| `java-version` | `17`             |
-| `encoding`     | `UTF-8`          |
-| `version`      | `0.1.0-SNAPSHOT` |
+| Name           | Description |
+|----------------|-------------|
+| `<artifactId>  |
+| `<groupId>`    |
+
+$h3 Optional Parameters
+
+| Name            | Default          | Description |
+|-----------------|------------------|-------------|
+| `<javaVersion>` | `17`             |
+| `<encoding>`    | `UTF-8`          |
+| `<version>`     | `0.1.0-SNAPSHOT` |

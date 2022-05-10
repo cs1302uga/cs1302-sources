@@ -17,7 +17,7 @@
     <requiredProperty key="version">
       <defaultValue>0.1.0-SNAPSHOT</defaultValue>
     </requiredProperty>
-    <requiredProperty key="java-version">
+    <requiredProperty key="javaVersion">
       <defaultValue>17</defaultValue>
     </requiredProperty>
     <requiredProperty key="encoding">

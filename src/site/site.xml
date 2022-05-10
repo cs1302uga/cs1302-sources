@@ -17,28 +17,14 @@
   </skin>
 
   <custom>
-    <fluidoSkin>
-      <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
-      <topBarEnabled>true</topBarEnabled>
-      <sideBarEnabled>false</sideBarEnabled>
-      <navBarStyle>navbar-inverse</navBarStyle>
-      <skipGenerationDate>true</skipGenerationDate>
-      <breadcrumbDivider>»</breadcrumbDivider>
-      <topBarIcon>
-        <name>${project.artifactId}</name>
-        <href>index.html</href>
-      </topBarIcon>
-    </fluidoSkin>
+    <cs1302>
+    </cs1302>
   </custom>
-
-  <bannerLeft>
-    <name>${this.organization.name}</name>
-  </bannerLeft>
 
   <body>
 
     <breadcrumbs>
-      <item name="${this.organization.name}" href="${this.organization.url}"/>
+      <item name="${this.groupId}" href="${this.organization.url}"/>
       <item name="${this.name}" href="${this.url}"/>
     </breadcrumbs>
 
