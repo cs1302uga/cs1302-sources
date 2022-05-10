@@ -70,6 +70,7 @@
     <project.reporting.outputEncoding>${cs1302.encoding}</project.reporting.outputEncoding>
     <maven.compiler.source>${cs1302.java.version}</maven.compiler.source>
     <maven.compiler.target>${cs1302.java.version}</maven.compiler.target>
+    <maven.compiler.release>${cs1302.java.version}</maven.compiler.release>
   </properties>
 
   <dependencyManagement>
@@ -364,6 +365,9 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jxr-plugin</artifactId>
+        <configuration>
+          <linkJavadoc>true</linkJavadoc>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
