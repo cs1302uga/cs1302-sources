@@ -1,0 +1,18 @@
+#set($h1 = '#')
+#set($h2 = '##')
+#set($h3 = '###')
+#set($h4 = '####')
+
+<head>
+    <title>About</title>
+</head>
+
+<h1 class="visually-hidden">${project.name}</h1>
+
+$h2 ${project.artifactId}
+
+The **${project.groupId}:${project.artifactId}** project provides the
+[parent POM](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#project-inheritance)
+for several Open Source Software (OSS) projects and Open Educational Resources
+(OERs) designed for the CSCI 1302 Software Development course at the
+University of Georgia.
