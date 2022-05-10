@@ -8,4 +8,15 @@
     <artifactId>cs1302-site-skin</artifactId>
     <version>${project.version}</version>
   </skin>
+
+  <body>
+    <menu>
+      <item name="About" href="${this.url}" />
+    </menu>
+
+    <menu ref="reports" />
+    <menu ref="modules" />
+    <menu ref="parent" />
+  </body>
+
 </project>
