@@ -12,27 +12,9 @@
   </skin>
 
   <custom>
-    <fluidoSkin>
-      <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
-      <topBarEnabled>true</topBarEnabled>
-      <sideBarEnabled>false</sideBarEnabled>
-      <navBarStyle>navbar-inverse</navBarStyle>
-      <skipGenerationDate>true</skipGenerationDate>
-      <breadcrumbDivider>»</breadcrumbDivider>
-      <topBarIcon>
-        <name>${project.artifactId}</name>
-        <href>index.html</href>
-      </topBarIcon>
-    </fluidoSkin>
   </custom>
 
   <body>
-
-    <breadcrumbs>
-      <item name="${this.organization.name}" href="${this.organization.url}"/>
-      <item name="${this.name}" href="${this.url}"/>
-    </breadcrumbs>
-
     <menu name="Overview">
       <item name="About" href="${this.url}"/>
     </menu>
@@ -40,14 +22,6 @@
     <menu ref="reports" />
     <menu ref="modules" />
     <menu ref="parent" />
-
-    <footer>
-      <![CDATA[<p>&copy; ${this.inceptionYear} <a href="${this.organization.url}">${this.organization.name}</a>.</p>]]>
-      <![CDATA[<p class="text-muted">]]>
-      <![CDATA[The content and opinions expressed on this Web page do not necessarily reflect the views of nor are they endorsed by the University of Georgia or the University System of Georgia.]]>
-      <![CDATA[</p>]]>
-    </footer>
-
   </body>
 
 </project>
