@@ -49,11 +49,21 @@
     </header>
     <aside class="bg-light">
       <div class="container py-2">
-        #mavenCentralBadge()
+
+        </nav>#mavenCentralBadge()
       </div>
     </aside>
     <main class="flex-shrink-0">
       <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+#*        *##foreach ( $item in $decoration.body.breadcrumbs )
+              <li class="breadcrumb-item active" aria-current="page">
+              <a href="$PathTool.calculateLink( $item.href, $relativePath )">$item.name</a>
+              </li>
+#*        *##end
+          </ol>
+        </nav>
         $bodyContent
       </div>
     </main>

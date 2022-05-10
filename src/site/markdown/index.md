@@ -1,5 +1,3 @@
-![Maven Central](https://img.shields.io/maven-central/v/io.github.cs1302uga/cs1302)
-
 ## Welcome to CSCI 1302 @ UGA CS
 
 This project includes Open Source Software (OSS) and Open Educational Resources
