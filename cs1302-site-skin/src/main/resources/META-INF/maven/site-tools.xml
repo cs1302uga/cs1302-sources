@@ -3,6 +3,6 @@
 <tools>
   <toolbox scope="application">
     <tool key="soup" class="io.github.cs1302uga.JsoupTool"/>
-    <tool key="map" class="java.util.HashMap"/>
+    <tool key="gson" class="io.github.cs1302uga.GsonTool"/>
   </toolbox>
 </tools>

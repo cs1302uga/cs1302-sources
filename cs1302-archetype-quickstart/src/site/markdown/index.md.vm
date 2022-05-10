@@ -14,8 +14,8 @@ $h2 ${project.artifactId}
 The **${project.artifactId}** project provides a
 [Maven *archetype*](https://maven.apache.org/archetype/maven-archetype-plugin/index.html)
 that can be used with the
-[Maven Archetype Plugin](https://maven.apache.org/archetype/maven-archetype-plugin/generate-mojo.html).
-Here is a quick example that creates a sample project
+[Maven Archetype Plugin](https://maven.apache.org/archetype/maven-archetype-plugin/generate-mojo.html)
+to generate a project project. Here is a quick example that generates a project
 using the archetype:
 
 ```bash
@@ -24,18 +24,3 @@ mvn archetype:generate \
   -DarchetypeArtifactId=${project.artifactId} \
   -DarchetypeVersion=${project.version}
 ```
-
-$h3 Required Parameters
-
-| Name           | Description |
-|----------------|-------------|
-| `<artifactId>  |
-| `<groupId>`    |
-
-$h3 Optional Parameters
-
-| Name            | Default          | Description |
-|-----------------|------------------|-------------|
-| `<javaVersion>` | `17`             |
-| `<encoding>`    | `UTF-8`          |
-| `<version>`     | `0.1.0-SNAPSHOT` |
