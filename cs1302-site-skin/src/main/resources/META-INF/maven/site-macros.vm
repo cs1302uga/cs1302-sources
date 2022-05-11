@@ -13,6 +13,10 @@ Apache Maven Doxia Site Renderer#if( $doxiaSiteRendererVersion ) $doxiaSiteRende
 #img ( "Maven Central" "https://img.shields.io/maven-central/v/$project.groupId/$project.artifactId" )
 #end##--------------------------------------------------------------------------
 ##
+#macro( ossrhSnapshotBadge )##---------------------------------------------------
+#img ( "OSSRH Snapshot" "https://img.shields.io/nexus/s/$project.groupId/$project.artifactId?label=s01.oss.sonatype.org&server=https%3A%2F%2Fs01.oss.sonatype.org" )
+#end##--------------------------------------------------------------------------
+##
 #macro( calcLink $target )##----------------------------------------------------
 #**### Calculates the appropriate to the target.
 #**### @param target specifies the target URL

@@ -26,7 +26,7 @@
   <body class="d-flex flex-column h-100">
     <header>
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container align-items-end">
+        <div class="container align-items-center">
           <a class="navbar-brand flex-fill" href="$project.url">
             $project.artifactId
             <small class="fs-6 text-muted d-block d-lg-inline-block">$project.version</small>
@@ -65,6 +65,7 @@
     <aside class="bg-light">
       <div class="container py-2">
         #mavenCentralBadge( $project.groupId $project.artifactId )
+        #if ( $project.packaging != "pom" )#ossrhSnapshotBadge#end
       </div>
     </aside>
     <main class="flex-shrink-0">
