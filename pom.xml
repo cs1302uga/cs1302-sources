@@ -203,9 +203,6 @@
               </goals>
             </execution>
           </executions>
-          <configuration>
-            <javadocVersion>${cs1302.java.version}</javadocVersion>
-          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -388,6 +385,7 @@
         <artifactId>jacoco-maven-plugin</artifactId>
       </plugin>
     </plugins>
+
   </build>
 
   <scm>
