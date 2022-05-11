@@ -9,9 +9,10 @@
   <packaging>jar</packaging>
 
   <name>${artifactId}</name>
-  <url>https://cs.uga.edu</url>
+  <url>https://cs1302uga.github.io</url>
 
   <properties>
+    <checkstyle.config.location>https://github.com/cs1302uga/cs1302-styleguide/raw/master/cs1302_checks.xml</checkstyle.config.location>
     <maven.compiler.source>${javaVersion}</maven.compiler.source>
     <maven.compiler.target>${javaVersion}</maven.compiler.target>
     <maven.compiler.release>${javaVersion}</maven.compiler.release>
@@ -31,9 +32,6 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-checkstyle-plugin</artifactId>
           <version>3.1.2</version>
-          <configuration>
-            <configLocation>https://github.com/cs1302uga/cs1302-styleguide/raw/master/cs1302_checks.xml</configLocation>
-          </configuration>
           <dependencies>
             <dependency>
               <groupId>com.puppycrawl.tools</groupId>
