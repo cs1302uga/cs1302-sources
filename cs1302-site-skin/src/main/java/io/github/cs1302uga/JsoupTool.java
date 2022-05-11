@@ -57,6 +57,15 @@ public class JsoupTool extends SafeConfig {
     } // initFromContext
 
     /**
+     * Get the output encoding.
+     *
+     * @return the output encoding.
+     */
+    public Charset getOutputEncoding() {
+        return this.outputEncoding;
+    } // getOutputEncoding
+
+    /**
      * Set the output encoding.
      *
      * @param outputEncoding the desired output encoding
