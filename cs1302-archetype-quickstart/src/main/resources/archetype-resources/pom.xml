@@ -50,6 +50,7 @@
         <configuration>
           <compilerArgs>
             <arg>-Xlint:unchecked</arg>
+            <arg>-g</arg>
           </compilerArgs>
         </configuration>
       </plugin>
