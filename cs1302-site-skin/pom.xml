@@ -33,14 +33,12 @@
   </properties>
 
   <dependencies>
-    <!--
     <dependency>
       <groupId>org.apache.maven.doxia</groupId>
       <artifactId>doxia-sitetools</artifactId>
       <version>2.0.0-M2</version>
       <type>pom</type>
     </dependency>
-    -->
     <dependency>
       <groupId>org.apache.velocity</groupId>
       <artifactId>velocity-engine-core</artifactId>

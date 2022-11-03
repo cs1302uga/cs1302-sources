@@ -1,21 +1,34 @@
 ##
-#set( $bodyContent = $bodyContent.replaceAll('class="bodyTable"', 'class="table"') )
 ##
-#macro( generatedBy )
+##
+#macro( call $obj )##-----------------------------------------------------------
+#**# Call $obj, but ignore its return value.
+#**##if ($obj)##
+#**### do nothing
+#**##end##
+#end##--------------------------------------------------------------------------
+##
+##
+#macro( generatedBy )##---------------------------------------------------------
 Apache Maven Doxia Site Renderer#if( $doxiaSiteRendererVersion ) $doxiaSiteRendererVersion#end##
-#end
+#end##--------------------------------------------------------------------------
+##
 ##
 #macro( img $alt $src )##-------------------------------------------------------
 #**#<img alt="$alt" src="$src">##
 #end##--------------------------------------------------------------------------
 ##
 #macro( mavenCentralBadge )##---------------------------------------------------
+<a href="https://search.maven.org/search?q=g:$project.groupId%20AND%20a:$project.artifactId">
 #img ( "Maven Central" "https://img.shields.io/maven-central/v/$project.groupId/$project.artifactId" )
+</a>
 #end##--------------------------------------------------------------------------
+##
 ##
 #macro( ossrhSnapshotBadge )##---------------------------------------------------
 #img ( "OSSRH Snapshot" "https://img.shields.io/nexus/s/$project.groupId/$project.artifactId?label=s01.oss.sonatype.org&server=https%3A%2F%2Fs01.oss.sonatype.org" )
 #end##--------------------------------------------------------------------------
+##
 ##
 #macro( calcLink $target )##----------------------------------------------------
 #**### Calculates the appropriate to the target.
@@ -23,3 +36,14 @@ Apache Maven Doxia Site Renderer#if( $doxiaSiteRendererVersion ) $doxiaSiteRende
 #**#$PathTool.calculateLink( $target, $relativePath )##
 #end##--------------------------------------------------------------------------
 ##
+##
+#set ( $body = $soup.parse($bodyContent) )
+<!-- TABLES
+#foreach ( $table in $body.select('table') )
+#**##if ( !$table.hasClass('table') )
+#**##**##call ( $table.addClass('table') )
+#**##end
+#end
+-->
+##
+#set( $bodyContent = $body )

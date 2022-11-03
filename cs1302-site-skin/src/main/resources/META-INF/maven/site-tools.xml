@@ -4,5 +4,7 @@
   <toolbox scope="application">
     <tool key="soup" class="io.github.cs1302uga.JsoupTool"/>
     <tool key="gson" class="io.github.cs1302uga.GsonTool"/>
+    <tool key="map" class="java.util.Map"/>
+    <tool key="optional" class="java.util.Optional"/>
   </toolbox>
 </tools>

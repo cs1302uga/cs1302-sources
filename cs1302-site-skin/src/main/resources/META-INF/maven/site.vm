@@ -6,7 +6,7 @@
 -->
 <html#if ( $locale ) lang="$locale.language"#end>
   <head>
-    <meta charset="${outputEncoding}">
+    <meta charset="$outputEncoding">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="#generatedBy()" />
 #foreach( $author in $authors )
@@ -20,8 +20,10 @@
     <title>$title</title>
 #end
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/styles/default.min.css">
-    <link rel="stylesheet" href="$relativePath/css/cs1302-site-skin.css">
+    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/styles/default.min.css" rel="stylesheet">
+    <link href="$relativePath/css/cs1302-site-skin.css" rel="stylesheet">
+    <link href="$relativePath/css/site.css" rel="stylesheet" />
+    <link href="$relativePath/css/print.css" rel="stylesheet" media="print" />
   </head>
   <body class="d-flex flex-column h-100">
     <header>
@@ -63,12 +65,12 @@
       </nav>
     </header>
     <aside class="bg-light">
-      <div class="container py-2">
+      <div class="container py-2 d-flex gap-2">
         #mavenCentralBadge( $project.groupId $project.artifactId )
         #if ( $project.packaging != "pom" )#ossrhSnapshotBadge#end
       </div>
     </aside>
-    <main class="flex-shrink-0">
+    <div class="flex-shrink-0">
       <div class="container mt-3">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
@@ -83,9 +85,11 @@
 #*        *##end
           </ol>
         </nav>
-        $bodyContent
+        <main class="bodyContent">
+          $bodyContent
+        </main>
       </div>
-    </main>
+    </div>
     <footer class="footer mt-3 py-3 border-top">
       <div class="container">
 #*  *##if( $decoration.body.footer )
