@@ -29,8 +29,5 @@
     <requiredProperty key="javaVersion">
       <defaultValue>17</defaultValue>
     </requiredProperty>
-    <requiredProperty key="encoding">
-      <defaultValue>UTF-8</defaultValue>
-    </requiredProperty>
   </requiredProperties>
 </archetype-descriptor>
