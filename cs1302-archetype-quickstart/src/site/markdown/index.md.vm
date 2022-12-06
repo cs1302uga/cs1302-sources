@@ -2,6 +2,8 @@
 #set($h2 = '##')
 #set($h3 = '###')
 #set($h4 = '####')
+#set($mvn_glos_url = 'https://maven.apache.org/glossary.html')
+#set($mvn_arch_plug_url = 'https://maven.apache.org/archetype/maven-archetype-plugin')
 
 <head>
     <title>About</title>
@@ -11,11 +13,10 @@
 
 $h2 ${project.artifactId}
 
-The **${project.groupId}:${project.artifactId}** project provides a
-[Maven *archetype*](https://maven.apache.org/archetype/maven-archetype-plugin/index.html)
-that can be used with the
-[Maven Archetype Plugin](https://maven.apache.org/archetype/maven-archetype-plugin/generate-mojo.html)
-to generate a Maven project.
+The **${project.groupId}:${project.artifactId}** project provides a [Maven
+*archetype*](${mvn_arch_plug_url}/index.html) that can be used with the [Maven Archetype
+Plugin](${mvn_arch_plug_url}/generate-mojo.html) to generate a [Maven
+project](${mvn_glos_url}#:~:text=project,-%3A%20Maven%20thinks%20in).
 
 $h3 Usage
 
@@ -30,3 +31,14 @@ mvn archetype:generate \
   -DarchetypeArtifactId=${project.artifactId} \
   -DarchetypeVersion=${project.version}
 ```
+
+$h3 Configuration
+
+This archetype supports the following configuration properties:
+
+| Name          | Required | Description |
+|---------------|----------|-------------|
+| `artifactId`  | Yes      | The directory name for the generated project with lowercase letters and no strange symbols (e.g., `cs1302-project`). |
+| `groupId`     | Yes      | The package name for your the generated project's Java code (e.g., `cs1302.project`). |
+| `version`     | No       | The version with numbers and dots for the generated project (e.g., the **default value** is `0.1.0-SNAPSHOT`)  |
+| `javaVersion` | No       | The version of

@@ -27,17 +27,21 @@
       <name>CC-BY-NC-SA-4.0</name>
       <url>https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.txt</url>
       <distribution>repo</distribution>
-      <comments>Any project that is part of ${project.groupId} is said to use
-      this license, unless explicitly stated otherwise in the project's POM. You
-      do not have to comply with the license for elements of the material in the
-      public domain or where your use is permitted by an applicable exception or
-      limitation. No warranties are given. The license may not give you all of
-      the permissions necessary for your intended use. For example, other rights
-      such as publicity, privacy, or moral rights may limit how you use the
-      material. Additionally, it should be noted that the content and opinions
-      expressed in this license do not necessarily reflect the views of nor are
-      they endorsed by the University of Georgia or the University System of
-      Georgia.</comments>
+      <comments>This license relates to projects and/or modules with
+      "${project.groupId}" as their group ID (the "Software"). Unless
+      explicitly stated otherwise in the Software's POM, the terms of this
+      license apply to any person obtaining a copy of the Software's
+      documentation.</comments>
+    </license>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+      <comments>This license relates to projects and/or modules with
+      "${project.groupId}" as their group ID (the "Software"). Unless
+      explicitly stated otherwise in the Software's POM, the terms of this
+      license apply to any person obtaining a copy of the Software and/or
+      it's source code.</comments>
     </license>
   </licenses>
 
@@ -66,19 +70,29 @@
     <cs1302.java.version>17</cs1302.java.version>
     <cs1302.encoding>UTF-8</cs1302.encoding>
     <cs1302.javadoc.io>https://www.javadoc.io/doc</cs1302.javadoc.io>
+    <cs1302.deps.doxiaSiteTools.version>2.0.0-M4</cs1302.deps.doxiaSiteTools.version>
+    <cs1302.deps.junit.version>5.9.1</cs1302.deps.junit.version>
+    <cs1302.plugins.mavenSitePlugin.version>4.0.0-M4</cs1302.plugins.mavenSitePlugin.version>
     <project.build.sourceEncoding>${cs1302.encoding}</project.build.sourceEncoding>
     <project.reporting.outputEncoding>${cs1302.encoding}</project.reporting.outputEncoding>
     <maven.compiler.source>${cs1302.java.version}</maven.compiler.source>
     <maven.compiler.target>${cs1302.java.version}</maven.compiler.target>
     <maven.compiler.release>${cs1302.java.version}</maven.compiler.release>
+
   </properties>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
+        <groupId>org.apache.maven.doxia</groupId>
+        <artifactId>doxia-sitetools</artifactId>
+        <version>${cs1302.deps.doxiaSiteTools.version}</version>
+        <type>pom</type>
+      </dependency>
+      <dependency>
         <groupId>org.junit</groupId>
         <artifactId>junit-bom</artifactId>
-        <version>5.9.1</version>
+        <version>${cs1302.deps.junit.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -166,7 +180,7 @@
           <configuration>
             <useReleaseProfile>false</useReleaseProfile>
             <releaseProfiles>release</releaseProfiles>
-            <goals>deploy nexus-staging:release site site:stage scm-publish:publish-scm</goals>
+            <goals>install deploy nexus-staging:release site site:stage scm-publish:publish-scm</goals>
           </configuration>
         </plugin>
         <plugin>
@@ -207,7 +221,15 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
-          <version>4.0.0-M1</version>
+          <version>${cs1302.plugins.mavenSitePlugin.version}</version>
+          <dependencies>
+            <dependency>
+              <groupId>org.apache.maven.doxia</groupId>
+              <artifactId>doxia-sitetools</artifactId>
+              <version>${cs1302.deps.doxiaSiteTools.version}</version>
+              <type>pom</type>
+            </dependency>
+          </dependencies>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -220,10 +242,10 @@
           <version>1.12.2</version>
           <!--
               <configuration>
-	      <providerImplementations>
-	      <git>gitexe</git>
-	      </providerImplementations>
-	      </configuration>
+          <providerImplementations>
+          <git>gitexe</git>
+          </providerImplementations>
+          </configuration>
           -->
         </plugin>
         <plugin>
@@ -311,19 +333,19 @@
           <artifactId>jacoco-maven-plugin</artifactId>
           <version>0.8.8</version>
           <executions>
-	    <execution>
-	      <goals>
-		<goal>prepare-agent</goal>
-	      </goals>
-	    </execution>
-	    <execution>
-	      <id>report</id>
-	      <phase>test</phase>
-	      <goals>
-		<goal>report</goal>
-	      </goals>
-	    </execution>
-	  </executions>
+        <execution>
+          <goals>
+        <goal>prepare-agent</goal>
+          </goals>
+        </execution>
+        <execution>
+          <id>report</id>
+          <phase>test</phase>
+          <goals>
+        <goal>report</goal>
+          </goals>
+        </execution>
+      </executions>
         </plugin>
       </plugins>
     </pluginManagement>

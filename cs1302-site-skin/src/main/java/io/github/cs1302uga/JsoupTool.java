@@ -29,32 +29,10 @@ public class JsoupTool extends SafeConfig {
     /**
      * Construct a {@code JsoupTool} object.
      */
-    public JsoupTool() {}
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    protected void configure(ValueParser values) {
-        Optional.ofNullable(values.get(ToolContext.CONTEXT_KEY))
-            .filter(ToolContext.class::isInstance)
-            .map(ToolContext.class::cast)
-            .ifPresent(this::initFromContext);
-    } // configure
-
-    /**
-     * Inform this {@link io.github.cs1302uga.JsoupTool} so that it should take the
-     * specified {@code velocityContext} into consideration, when applicable.
-     *
-     * @param velocityContext
-     */
-    private void initFromContext(ToolContext velocityContext) {
-        Optional.ofNullable(velocityContext.get("outputEncoding"))
-            .filter(String.class::isInstance)
-            .map(String.class::cast)
-            .map(Charset::forName)
-            .ifPresent(this::setOutputEncoding);
-    } // initFromContext
+    public JsoupTool() {
+        setSafeMode(false);
+        System.err.println("constructing JsoupTool");
+    } // JsoupTool
 
     /**
      * Get the output encoding.
@@ -99,5 +77,15 @@ public class JsoupTool extends SafeConfig {
         Element elem = parse(content);
         return elem.select(cssQuery);
     } // select
+
+    public Element addClass(String content, String cssQuery, String... classNames) {
+        Element doc = parse(content);
+        for (Element elem: doc.select(cssQuery)) {
+            for (String className: classNames) {
+                elem.addClass(className);
+            } // for
+        } // for
+        return doc;
+    } // addClass
 
 } // JsoupTool

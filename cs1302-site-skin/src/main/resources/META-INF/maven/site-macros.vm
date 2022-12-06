@@ -26,7 +26,9 @@ Apache Maven Doxia Site Renderer#if( $doxiaSiteRendererVersion ) $doxiaSiteRende
 ##
 ##
 #macro( ossrhSnapshotBadge )##---------------------------------------------------
+<a href="https://s01.oss.sonatype.org/content/repositories/snapshots/">
 #img ( "OSSRH Snapshot" "https://img.shields.io/nexus/s/$project.groupId/$project.artifactId?label=s01.oss.sonatype.org&server=https%3A%2F%2Fs01.oss.sonatype.org" )
+</a>
 #end##--------------------------------------------------------------------------
 ##
 ##
@@ -37,13 +39,3 @@ Apache Maven Doxia Site Renderer#if( $doxiaSiteRendererVersion ) $doxiaSiteRende
 #end##--------------------------------------------------------------------------
 ##
 ##
-#set ( $body = $soup.parse($bodyContent) )
-<!-- TABLES
-#foreach ( $table in $body.select('table') )
-#**##if ( !$table.hasClass('table') )
-#**##**##call ( $table.addClass('table') )
-#**##end
-#end
--->
-##
-#set( $bodyContent = $body )

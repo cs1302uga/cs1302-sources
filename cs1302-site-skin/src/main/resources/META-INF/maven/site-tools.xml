@@ -2,7 +2,6 @@
 <!-- Add custom tools to Velocity tools. The tools.xml file is included in the classpath and Velocity finds it. -->
 <tools>
   <toolbox scope="application">
-    <tool key="soup" class="io.github.cs1302uga.JsoupTool"/>
-    <tool key="gson" class="io.github.cs1302uga.GsonTool"/>
+    <tool key="soup" class="io.github.cs1302uga.JsoupTool" safeMode="false"/>
   </toolbox>
 </tools>
