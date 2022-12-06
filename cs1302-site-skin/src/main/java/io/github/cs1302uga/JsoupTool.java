@@ -78,14 +78,4 @@ public class JsoupTool extends SafeConfig {
         return elem.select(cssQuery);
     } // select
 
-    public Element addClass(String content, String cssQuery, String... classNames) {
-        Element doc = parse(content);
-        for (Element elem: doc.select(cssQuery)) {
-            for (String className: classNames) {
-                elem.addClass(className);
-            } // for
-        } // for
-        return doc;
-    } // addClass
-
 } // JsoupTool
