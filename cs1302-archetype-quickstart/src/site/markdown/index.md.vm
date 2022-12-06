@@ -40,5 +40,5 @@ This archetype supports the following configuration properties:
 |---------------|----------|-------------|
 | `artifactId`  | Yes      | The directory name for the generated project with lowercase letters and no strange symbols (e.g., `cs1302-project`). |
 | `groupId`     | Yes      | The package name for your the generated project's Java code (e.g., `cs1302.project`). |
-| `version`     | No       | The version with numbers and dots for the generated project (e.g., the **default value** is `0.1.0-SNAPSHOT`)  |
-| `javaVersion` | No       | The version of
+| `version`     | No       | The version with numbers and dots for the generated project (e.g., the **default value** is `0.1.0-SNAPSHOT`). |
+| `javaVersion` | No       | The version of Java to use (e.g., the **default value** is `17`). |
