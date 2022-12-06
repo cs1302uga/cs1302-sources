@@ -86,7 +86,9 @@
           </ol>
         </nav>
         <main class="bodyContent">
-#*        *##set ( $body = $bodyContent.replaceAll( "class=${esc.q}bodyTable${esc.q}", "class=${esc.q}table table-striped table-borderless${esc.q}" ) )
+#set ( $body = $bodyContent )
+#set ( $body = $body.replaceAll( "class=${esc.q}bodyTable${esc.q}", "class=${esc.q}table table-striped table-borderless${esc.q}" ) )
+#set ( $body = $body.replaceAll( "class=${esc.q}bodyTable ", "class=${esc.q}table table-striped table-borderless " ) )
 #*        *#$body
         </main>
       </div>
