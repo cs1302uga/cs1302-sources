@@ -6,7 +6,7 @@
   <skin>
     <groupId>io.github.cs1302uga</groupId>
     <artifactId>cs1302-site-skin</artifactId>
-    <version>${this.version}</version>
+    <version>${project.version}</version>
   </skin>
 
   <body>
