@@ -72,7 +72,7 @@
     <cs1302.javadoc.io>https://www.javadoc.io/doc</cs1302.javadoc.io>
     <cs1302.deps.doxiaSiteTools.version>2.0.0-M4</cs1302.deps.doxiaSiteTools.version>
     <cs1302.deps.junit.version>5.9.1</cs1302.deps.junit.version>
-    <cs1302.plugins.mavenSitePlugin.version>4.0.0-M4</cs1302.plugins.mavenSitePlugin.version>
+    <cs1302.plugins.mavenSitePlugin.version>4.0.0-M5</cs1302.plugins.mavenSitePlugin.version>
     <project.build.sourceEncoding>${cs1302.encoding}</project.build.sourceEncoding>
     <project.reporting.outputEncoding>${cs1302.encoding}</project.reporting.outputEncoding>
     <maven.compiler.source>${cs1302.java.version}</maven.compiler.source>
@@ -136,9 +136,14 @@
     <pluginManagement>
       <plugins>
         <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-enforcer-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>3.2.1</version>
           <executions>
             <execution>
               <id>enforce-maven-version</id>
@@ -148,7 +153,7 @@
               <configuration>
                 <rules>
                   <requireMavenVersion>
-                    <version>3.8</version>
+                    <version>3.9</version>
                   </requireMavenVersion>
                 </rules>
               </configuration>
@@ -158,12 +163,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-pmd-plugin</artifactId>
-          <version>3.19.0</version>
+          <version>3.20.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>3.0.0-M2</version>
+          <version>3.1.0</version>
           <configuration>
             <skip>true</skip>
           </configuration>
@@ -171,12 +176,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
-          <version>3.2.0</version>
+          <version>3.3.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-release-plugin</artifactId>
-          <version>3.0.0-M5</version>
+          <version>3.0.0</version>
           <configuration>
             <useReleaseProfile>false</useReleaseProfile>
             <releaseProfiles>release</releaseProfiles>
@@ -200,7 +205,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>3.4.0</version>
+          <version>3.4.1</version>
           <executions>
             <execution>
               <id>attach-javadocs</id>
@@ -234,24 +239,24 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>3.3.0</version>
+          <version>3.4.2</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-scm-plugin</artifactId>
-          <version>1.12.2</version>
+          <version>2.0.0</version>
           <!--
-              <configuration>
-          <providerImplementations>
-          <git>gitexe</git>
-          </providerImplementations>
+          <configuration>
+            <providerImplementations>
+              <git>gitexe</git>
+            </providerImplementations>
           </configuration>
           -->
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-scm-publish-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>3.2.1</version>
           <executions>
             <execution>
               <id>scm-publish</id>
@@ -284,32 +289,32 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>3.0.0-M6</version>
+          <version>3.0.0-M9</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-report-plugin</artifactId>
-          <version>3.0.0-M7</version>
+          <version>3.0.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-clean-plugin</artifactId>
-          <version>3.1.0</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-install-plugin</artifactId>
-          <version>3.0.0-M1</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-resources-plugin</artifactId>
           <version>3.2.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.3.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.10.1</version>
+          <version>3.11.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -319,12 +324,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>3.2.0</version>
+          <version>3.2.1</version>
           <dependencies>
             <dependency>
               <groupId>com.puppycrawl.tools</groupId>
               <artifactId>checkstyle</artifactId>
-              <version>10.5.0</version>
+              <version>10.9.3</version>
             </dependency>
           </dependencies>
         </plugin>
@@ -351,6 +356,10 @@
     </pluginManagement>
 
     <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
