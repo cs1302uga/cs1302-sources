@@ -22,10 +22,10 @@
 
   <dependencies>
     <dependency>
-      <!-- https://junit.org/junit5/docs/5.9.2/user-guide/ -->
+      <!-- https://junit.org/junit5/docs/5.10.1/user-guide/ -->
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
-      <version>5.9.2</version>
+      <version>5.10.1</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -34,6 +34,29 @@
 
     <pluginManagement>
       <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-enforcer-plugin</artifactId>
+          <version>3.4.1</version>
+          <executions>
+            <execution>
+              <id>enforce-versions</id>
+              <goals>
+                <goal>enforce</goal>
+              </goals>
+              <configuration>
+                <rules>
+                  <requireMavenVersion>
+                    <version>3.9</version>
+                  </requireMavenVersion>
+                  <requireJavaVersion>
+                    <version>${javaVersion}</version>
+                  </requireJavaVersion>
+                </rules>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>exec-maven-plugin</artifactId>
@@ -47,7 +70,7 @@
             <dependency>
               <groupId>com.puppycrawl.tools</groupId>
               <artifactId>checkstyle</artifactId>
-              <version>10.2</version>
+              <version>10.12.4</version>
             </dependency>
           </dependencies>
         </plugin>
