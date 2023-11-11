@@ -35,5 +35,8 @@
     <requiredProperty key="javaVersion">
       <defaultValue>17</defaultValue>
     </requiredProperty>
+    <requiredProperty key="mavenVersion">
+      <defaultValue>3.9.0</defaultValue>
+    </requiredProperty>
   </requiredProperties>
 </archetype-descriptor>
