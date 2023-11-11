@@ -70,8 +70,8 @@
     <cs1302.java.version>17</cs1302.java.version>
     <cs1302.encoding>UTF-8</cs1302.encoding>
     <cs1302.javadoc.io>https://www.javadoc.io/doc</cs1302.javadoc.io>
-    <cs1302.deps.doxiaSiteTools.version>2.0.0-M4</cs1302.deps.doxiaSiteTools.version>
-    <cs1302.deps.junit.version>5.9.1</cs1302.deps.junit.version>
+    <cs1302.deps.doxiaSiteTools.version>2.0.0-M13</cs1302.deps.doxiaSiteTools.version>
+    <cs1302.deps.junit.version>5.10.1</cs1302.deps.junit.version>
     <cs1302.plugins.mavenSitePlugin.version>4.0.0-M5</cs1302.plugins.mavenSitePlugin.version>
     <project.build.sourceEncoding>${cs1302.encoding}</project.build.sourceEncoding>
     <project.reporting.outputEncoding>${cs1302.encoding}</project.reporting.outputEncoding>
@@ -99,7 +99,7 @@
       <dependency>
         <groupId>org.codehaus.plexus</groupId>
         <artifactId>plexus-components</artifactId>
-        <version>10.0</version>
+        <version>14.2</version>
         <type>pom</type>
       </dependency>
     </dependencies>
@@ -329,7 +329,7 @@
             <dependency>
               <groupId>com.puppycrawl.tools</groupId>
               <artifactId>checkstyle</artifactId>
-              <version>10.9.3</version>
+              <version>10.12.4</version>
             </dependency>
           </dependencies>
         </plugin>
