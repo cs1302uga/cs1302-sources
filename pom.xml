@@ -78,7 +78,6 @@
     <maven.compiler.source>${cs1302.java.version}</maven.compiler.source>
     <maven.compiler.target>${cs1302.java.version}</maven.compiler.target>
     <maven.compiler.release>${cs1302.java.version}</maven.compiler.release>
-
   </properties>
 
   <dependencyManagement>
@@ -275,6 +274,7 @@
           <configuration>
             <serverId>ossrh</serverId>
             <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+	    <stagingProgressTimeoutMinutes>20</stagingProgressTimeoutMinutes>
           </configuration>
           <executions>
             <execution>
