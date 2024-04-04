@@ -30,8 +30,8 @@
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container align-items-center">
           <a class="navbar-brand flex-fill" href="$project.url">
-            $project.artifactId
-            <small class="fs-6 text-muted d-block d-lg-inline-block">$project.version</small>
+            <span id="artifact-id">$project.artifactId</span>
+            <small id="project-version" class="fs-6 text-white-50 d-block d-lg-inline-block">$project.version</small>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
