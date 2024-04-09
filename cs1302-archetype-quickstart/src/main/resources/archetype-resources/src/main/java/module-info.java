@@ -1,4 +1,4 @@
-#set( $moduleId = $artifactId.trim().replace("-", ".").replaceAll("cs1302.", "cs1302uga.")
+#set( $moduleId = $artifactId.trim().replace("-", ".").replaceAll("cs1302.", "cs1302uga.") )
 /**
  * Defines the {@code $groupId:$artifactId} API.
  */
