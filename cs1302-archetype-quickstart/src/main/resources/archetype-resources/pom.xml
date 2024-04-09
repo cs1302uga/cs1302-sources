@@ -22,11 +22,23 @@
 
   <dependencies>
     <dependency>
-      <!-- https://junit.org/junit5/docs/5.10.1/user-guide/ -->
+      <!-- https://github.com/google/gson -->
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.10.1</version>
+    </dependency>
+    <dependency>
+      <!-- https://junit.org/junit5/docs/5.10.2/user-guide/ -->
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
       <version>5.10.2</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <!-- https://javadoc.io/doc/org.openjfx/javafx-controls/17.0.10/ -->
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-controls</artifactId>
+      <version>17.0.10</version>
     </dependency>
   </dependencies>
 
@@ -42,24 +54,46 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>exec-maven-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>3.2.0</version>
+	  <executions>
+            <execution>
+              <goals>
+                <goal>exec</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <cleanupDaemonThread>false</cleanupDaemonThread>
+            <executable>java</executable>
+            <arguments>
+              <argument>-Dprism.order=sw</argument>
+              <argument>--module-path</argument>
+              <modulepath/>
+              <argument>--add-modules</argument>
+              <argument>javafx.controls</argument>
+              <argument>-cp</argument>
+              <classpath/>
+	      <argument>--module</argument>
+              <argument>${exec.mainClass}</argument>
+            </arguments>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>3.2.0</version>
+          <version>3.3.1</version>
           <dependencies>
             <dependency>
               <groupId>com.puppycrawl.tools</groupId>
               <artifactId>checkstyle</artifactId>
-              <version>10.12.4</version>
+              <version>10.15.0</version>
             </dependency>
           </dependencies>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.10.1</version>
+          <version>3.13.0</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -92,7 +126,7 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
           <compilerArgs>
-            <arg>-Xlint:unchecked</arg>
+            <arg>-Xlint:unchecked,rawtypes</arg>
             <arg>-g</arg>
           </compilerArgs>
         </configuration>
