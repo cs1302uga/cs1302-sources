@@ -25,6 +25,11 @@
     <fileSet filtered="true">
       <directory>src/test/resources</directory>
     </fileSet>
+    <fileSet filtered="true">
+      <includes>
+	<include>run.sh</include>
+      </includes>
+    </fileSet>
   </fileSets>
   <requiredProperties>
     <requiredProperty key="groupId"/>
