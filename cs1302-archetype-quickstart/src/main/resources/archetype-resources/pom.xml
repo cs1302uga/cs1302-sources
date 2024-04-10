@@ -74,7 +74,7 @@
               <argument>-cp</argument>
               <classpath/>
 	      <argument>--module</argument>
-              <argument>${exec.mainClass}</argument>
+              <argument>${package}/${exec.mainClass}</argument>
             </arguments>
           </configuration>
         </plugin>
