@@ -22,6 +22,7 @@
 
     <menu>
       <item name="About" href="${this.url}" />
+      <item name="Book" href="https://cs1302uga.github.io/cs1302-book/" />
     </menu>
 
     <menu ref="reports" />
