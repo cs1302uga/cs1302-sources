@@ -28,7 +28,7 @@ the version number in the POM in any way.
 .. code::
 
    $ mvn clean deploy
-   $ mvn site site:stage scm-publish:publish-scm
+   $ mvn package site site:stage scm-publish:publish-scm
 
 Release
 *******
